@@ -1,0 +1,30 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+    
+.title-page{
+    margin-bottom: 1vw !important;
+    line-height: 2.86458vw;
+    font-family: 'SFUIDisplay-Bold';
+    font-size: 1.5vw;
+}
+// TABLET MODE
+@media (max-width:1024px) and (min-width:600px){
+    .title-page{
+        margin-top: 8vw !important;
+        margin-bottom: 4vw !important;
+        line-height: 2.86458vw;
+        font-family: 'SFUIDisplay-Bold';
+        font-size: 4vw;
+    }
+}
+// MOBILE MODE
+@media (max-width:599px) {
+    .title-page{
+        margin-top: 8vw !important;
+        margin-bottom: 4vw !important;
+        line-height: 2.86458vw;
+        font-family: 'SFUIDisplay-Bold';
+        font-size: 4vw;
+    }
+}

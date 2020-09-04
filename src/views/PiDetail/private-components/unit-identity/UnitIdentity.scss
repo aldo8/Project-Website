@@ -1,0 +1,162 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.unit-card{
+    width: vw(530);
+    height: vw(240);
+    display: flex;
+    .color-line{
+        width: vw(8);
+        background-color: #C5D0EA;
+    }
+    .unit-card-content{
+        padding: vw(21) vw(20) 0 vw(27.15);
+        width: 100%;
+        .unit-card-title{
+            font-size: vw(21);
+            line-height: vw(25);
+            letter-spacing: 0.03em;
+            font-family: 'Lato-Black';
+            color: #C5D0EA;
+            margin: 0;
+        }
+        .unit-card-detail-container{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            margin-top: vw(4.8);
+            .unit-card-detail-left{
+                flex: 1;                
+            }
+            .unit-card-detail-right{
+                flex: 1;
+            }
+            .unit-card-detail-label{
+                font-family: 'SFUIText-Regular';
+                font-size: vw(10);
+                line-height: vw(12);
+                color: #9A9A9A;
+                margin: vw(14.2) 0 0 0;
+            }
+            .unit-card-detail-text{
+                font-family: 'SFUIText-Bold';
+                font-size: vw(14);
+                line-height: vw(17);
+                height: vw(17);
+                margin: vw(3.68) 0 0 0;
+                color: #3C3B3B;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 97%;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .unit-card{
+        width: vw-tab(485.22);
+        height: vw-tab(214.07);
+        .color-line{
+            width: vw-tab(8);
+            background-color: #C5D0EA;;
+        }
+        .unit-card-content{
+            padding: vw-tab(21) vw-tab(24) 0 vw-tab(27.15);           
+            .unit-card-title{
+                font-size: vw-tab(21);
+                line-height: vw-tab(25);
+                letter-spacing: 0.03em;
+                font-family: 'Lato-Black';
+                color: #C5D0EA;
+                margin: 0;
+            }
+            .unit-card-detail-container{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw-tab(4.8);
+                .unit-card-detail-left{
+                    flex: 1;                    
+                }
+                .unit-card-detail-right{
+                    flex: 1;
+                }
+                .unit-card-detail-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw-tab(10);
+                    line-height: vw-tab(12);
+                    color: #9A9A9A;
+                    margin: vw-tab(14.2) 0 0 0;
+                }
+                .unit-card-detail-text{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-tab(14);
+                    line-height: vw-tab(17);
+                    height: vw-tab(17);
+                    margin: vw-tab(3.68) 0 0 0;
+                    color: #3C3B3B;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 97%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .unit-card{
+        width: 100%;
+        height: vw-mobile(190);
+        margin: 0;
+        margin-top: vw-mobile(15);
+        .color-line{
+            width: vw-mobile(8);
+            background-color: #C5D0EA;;
+        }
+        .unit-card-content{
+            padding: vw-mobile(21) vw-mobile(15) 0 vw-mobile(15);           
+            .unit-card-title{
+                font-size: vw-mobile(18);
+                line-height: vw-mobile(21);
+                letter-spacing: 0.03em;
+                font-family: 'Lato-Black';
+                color: #C5D0EA;
+                margin: 0;
+            }
+            .unit-card-detail-container{
+                padding: 0;
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw-mobile(4.8);
+                .unit-card-detail-left{
+                    flex: 1;                    
+                }
+                .unit-card-detail-right{
+                    flex: 1;
+                }
+                .unit-card-detail-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw-mobile(8);
+                    line-height: vw-mobile(9);
+                    color: #9A9A9A;
+                    margin: vw-mobile(14.2) 0 0 0;
+                }
+                .unit-card-detail-text{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-mobile(12);
+                    line-height: vw-mobile(14);
+                    margin: vw-mobile(3.68) 0 0 0;
+                    height: vw-mobile(14);
+                    color: #3C3B3B;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

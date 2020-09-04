@@ -1,0 +1,713 @@
+@import '../../themes/colors';
+@import '../../themes/fonts';
+@import '../../themes/size';
+
+.work-highlight-container{
+    display: flex;
+}
+
+.modal-container{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    .modal-content{
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.header-row{
+    display: flex;
+    flex-direction: row;
+    .btn-job-assignment{
+        background-color: white;
+        text-transform: none;
+        font-family: 'Lato-Bold';
+        color: #3C3B3B;
+        font-size: vw(15);
+        line-height: vw(18);
+        width: vw(200.53);
+        height: vw(48);
+        margin-right: vw(21.47);
+        box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+    }
+    .btn-job-assignment:hover{
+        background-image: url('../../assets/images/btn-background.png');
+        background-repeat: no-repeat;
+        background-size: vw(210) vw(57);
+        background-position-x: -0.2vw;
+        color: white;
+        @extend .btn-job-assignment;
+    }
+    .btn-job-assignment-active{
+        background-image: url('../../assets/images/btn-background.png');
+        background-repeat: no-repeat;
+        background-size: vw(210) vw(57);
+        background-position-x: -0.2vw;
+        color: white;
+        @extend .btn-job-assignment;
+    }
+}
+
+.title{
+    margin-top: vw(19) !important;
+    font-family: 'SFUIDisplay-Bold';
+    font-size: vw(25);
+    line-height: vw(30);
+}
+
+.bottom-row{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vw;
+    .btn-assign{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: vw(164.22) !important;
+        height: vw(33.07) !important;
+        font-size: vw(13) !important;
+        line-height: vw(16) !important;
+        font-family: 'Lato-Regular';
+        background-color: map-get($colors , primary);
+        text-transform: none;
+        box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+        border-radius: 0.4vw;
+        cursor: pointer;
+    }
+    .btn-unassign{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: vw(25);
+        width: vw(164.22) !important;
+        height: vw(33.07) !important;
+        font-size: vw(13) !important;
+        line-height: vw(16) !important;
+        font-family: 'Lato-Regular';
+        text-transform: none;
+        box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+        border-radius: 0.4vw;
+        background: #E6E6E6;
+        cursor: pointer;
+    }
+    .btn-assign:hover {
+        background-color: map-get($colors, primary-dark);
+    }
+    .btn-unassign:hover{
+        background-color: rgb(233, 105, 73);
+    }
+    .pagination{
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: vw(30);
+        .paging{
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px vw(2) vw(4) rgba(0, 0, 0, 0.161);
+            .page-active{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw(45.99);
+                min-width: vw(45.99);
+                height: vw(35.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Gotham-Regular';
+                background-color: map-get($colors , primary);
+                font-size: vw(13);
+                line-height: vw(16);
+                border-radius: 0;
+                cursor: pointer
+            }
+            .page-inactive{
+                width: vw(45.99);
+                min-width: vw(45.99);
+                height: vw(35.3);
+                width: vw(45.99);
+                min-width: vw(45.99);
+                height: vw(35.3);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                font-family: 'Gotham-Regular';
+                justify-content: center;
+                font-size: vw(13);
+                line-height: vw(16);
+                border-radius: 0;
+                cursor: pointer
+            }
+            .page-inactive:hover{
+                background-color: map-get($colors , primary);
+                cursor: pointer
+            }
+            .next-page{
+                width: vw(45.99);
+                min-width: vw(45.99);
+                height: vw(35.3);
+                width: vw(45.99);
+                min-width: vw(45.99);
+                height: vw(35.3);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                cursor: pointer;
+                .arrow-icon{
+                    font-size: vw(24);
+                }
+            }
+            .next-page:hover{
+                background-color: map-get($colors , primary);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.table-container{
+    display: flex;
+    flex-direction: column;
+    .filters-container{
+        display: flex;
+        flex-direction: row;
+        .dropdowns-container{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            margin-top: 0 !important;
+            .dropdown-container{
+                margin-left: vw(27.78);
+            }
+            .search-container{
+                flex: 1;
+                align-self: flex-end;
+                margin-left: 1.5vw;
+                width: 45vw !important;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .dropdown-container:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+    .jobs-list-container{
+        margin-top: 6vw !important;
+        .table{
+            font-size: 0.5vw;
+            .table-head{
+                border-bottom: vw(20) solid #F4F6F8;
+                padding-left: vw(5);
+                .table-cell{
+                    padding:vw(1);
+                    height: vw(50);
+                    font-size: vw(13) !important;
+                    line-height: vw(16) !important;
+                    font-family: 'Lato-Bold';
+                    color: #3C3B3B;
+                }
+            }
+            .table-body{
+                background-color: #ffffff;
+                .table-row{
+                    border-bottom: vw(5) solid #F4F6F8;
+                    cursor: pointer;
+                    .table-cell{
+                        padding: 0;
+                        height: vw(50);
+                        font-size: vw(14) !important;
+                        line-height: vw(17) !important;
+                        font-family: 'Lato-Bold';
+                        color: #3C3B3B;
+                    }
+                    .checkbox-checked{
+                        color: #3C3B3B;
+                    }
+                }
+                .table-row:hover{
+                    background-color:map-get($colors, primary);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .work-highlight-container{
+        display: flex;
+        width: vw-tab(722);
+    }
+
+    .header-row{
+        display: flex;
+        flex-direction: row;
+        margin-top: vw-tab(25);
+        width: vw-tab(722);
+        .btn-job-assignment{
+            background-color: white;
+            text-transform: none;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw-tab(15);
+            line-height: vw-tab(18);
+            width: vw-tab(222);
+            height: vw-tab(48);
+            margin-right: vw-tab(21.47);
+            box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+        }
+        
+        .btn-job-assignment-active{
+            background-image: url('../../assets/images/btn-background.png');
+            background-repeat: no-repeat;
+            background-size: vw-tab(230) vw-tab(57);
+            background-position-x: vw-tab(-4);
+            color: white;
+        }
+    }
+
+    .title{
+        margin-top: vw-tab(30) !important;
+        font-family: 'SFUIDisplay-Bold';
+        font-size: vw-tab(18);
+        line-height: vw-tab(22);
+    }
+
+    .line{
+        margin-top: vw-tab(40) !important;
+        margin-bottom: vw-tab(30) !important;
+        height: vw-tab(1);
+        background-color: rgba(154, 154, 154, 0.41) !important;        
+    }    
+    .filters-container{
+        display: flex;
+        flex-direction: column;
+        .search-container{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .filter-btn{
+                width: vw-tab(48);
+                height: vw-tab(48);
+                padding: 0;
+                border-radius: vw-tab(24);
+                background-color: white;
+                margin-left: vw-tab(15);
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+                .filter-icon{
+                    width: vw-tab(14.5);
+                    height: vw-tab(14)
+                }
+            }
+            .filter-btn-active{
+                width: vw-tab(48);
+                height: vw-tab(48);
+                padding: 0;
+                border-radius: vw-tab(24);
+                background-color: map-get($colors, primary);
+                margin-left: vw-tab(15);
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+                .filter-icon{
+                    width: vw-tab(14.5);
+                    height: vw-tab(14)
+                }
+            }
+        }
+        .dropdowns-container{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .dropdown-container{
+                margin-right: vw-tab(20);
+            }
+        }    
+    }
+    .table-container{
+        display: flex;
+        flex-direction: column;
+        .jobs-list-container{
+            margin-top: vw-tab(50) !important;
+            margin-bottom: vw-tab(20) !important;
+            overflow-x: scroll;
+            .table{
+                font-size: vw(5);
+                width: 220%;
+                .table-head{
+                    border-bottom: vw-tab(20) solid #F4F6F8;
+                    padding-left: vw-tab(5);
+                    .table-cell{
+                        padding: 0;
+                        height: vw-tab(50);
+                        font-size: vw-tab(13) !important;
+                        line-height: vw-tab(16) !important;
+                        font-family: 'Lato-Bold';
+                        color: #3C3B3B;
+                    }
+                }
+                .table-body{
+                    background-color: #ffffff;
+                    .table-row{
+                        border-bottom: vw-tab(10) solid #F4F6F8;
+                        .table-cell{
+                            padding: 0;
+                            height: vw-tab(50);
+                            font-size: vw-tab(14) !important;
+                            line-height: vw-tab(17) !important;
+                            font-family: 'Lato-Medium';
+                            color: #3C3B3B;
+                        }
+                        .checkbox-checked{
+                            color: #3C3B3B;
+                        }
+                    }
+                    .table-row:hover{
+                        background-color:map-get($colors, primary);
+                    }
+                }
+            }
+        }
+    } 
+    .bottom-row{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: vw-tab(20);
+        .btn-assign{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: vw-tab(125) !important;
+            height: vw-tab(37) !important;
+            font-size: vw-tab(13) !important;
+            line-height: vw-tab(16) !important;
+            font-family: 'Lato-Regular';
+            background-color: map-get($colors , primary);
+            text-transform: none;
+            box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+            border-radius: vw-tab(5);
+            cursor: pointer;
+        }
+        .btn-unassign{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: vw-tab(125) !important;
+            height: vw-tab(37) !important;
+            font-size: vw-tab(13) !important;
+            line-height: vw-tab(16) !important;
+            font-family: 'Lato-Regular';
+            text-transform: none;
+            box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+            border-radius: vw-tab(5);
+            background: #E6E6E6;
+            margin-left: vw-tab(20);
+            cursor: pointer;
+        }
+        .btn-assign:hover {
+            background-color: map-get($colors, primary-dark);
+        }
+        .btn-unassign:hover{
+            background-color: rgb(233, 105, 73);
+        }
+        .pagination{
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: vw-tab(25);
+            .paging{
+                display: flex;
+                flex-direction: row;
+                box-shadow: 0px vw-tab(2) vw-tab(4) rgba(0, 0, 0, 0.161);
+                .page-active{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: vw-tab(45.99);
+                    min-width: vw-tab(45.99);
+                    height: vw-tab(37);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Gotham-Regular';
+                    background-color: map-get($colors , primary);
+                    font-size: vw-tab(13);
+                    line-height: vw-tab(16);
+                    border-radius: 0;
+                    cursor: pointer;
+                }
+                .page-inactive{
+                    width: vw-tab(45.99);
+                    min-width: vw-tab(45.99);
+                    height: vw-tab(37);
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Gotham-Regular';
+                    justify-content: center;
+                    font-size: vw-tab(13);
+                    line-height: vw-tab(16);
+                    border-radius: 0;
+                    cursor: pointer;
+                }
+                .page-inactive:hover{
+                    background-color: map-get($colors , primary);
+                    cursor: pointer;
+                }
+                .next-page{
+                    width: vw-tab(45.99);
+                    min-width: vw-tab(45.99);
+                    height: vw-tab(37);
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 0;
+                    cursor: pointer;
+                    .arrow-icon{
+                        font-size: vw-tab(24);
+                    }
+                }
+                .next-page:hover{
+                    background-color: map-get($colors , primary);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .work-highlight-container{
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+    }
+    .header-row{
+        display: flex;
+        flex-direction: row;
+        width: vw-mobile(320);
+        margin-top: vw-mobile(30);
+        justify-content: space-between;
+        .btn-job-assignment{
+            background-color: white;
+            text-transform: none;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw-mobile(12);
+            line-height: vw-mobile(14);
+            width: vw-mobile(97);
+            height: vw-mobile(39);
+            box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+        }
+        
+        .btn-job-assignment-active{
+            background-image: url('../../assets/images/btn-background.png');
+            background-repeat: no-repeat;
+            background-size: vw-mobile(102) vw-mobile(46);
+            background-position-x: vw-mobile(-2);
+            background-position-y: vw-mobile(-2);
+            color: white;
+        }
+    }
+
+    .title{
+        margin-top: vw-mobile(26) !important;
+        margin-bottom: vw-mobile(5);
+        font-family: 'SFUIDisplay-Bold';
+        font-size: vw-mobile(14);
+        line-height: vw-mobile(17);
+    }
+    .line{
+        margin-top: vw-mobile(40) !important;
+        margin-bottom: vw-mobile(30) !important;
+        height: vw-mobile(1);
+        background-color: rgba(154, 154, 154, 0.41) !important;        
+    }    
+    .filters-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: vw-mobile(30);
+        .search-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            .search-bar{
+                width: vw-mobile(270);
+            }
+            .filter-icon-container{
+                width: vw-mobile(38);
+                height: vw-mobile(38);
+                margin-left: vw-mobile(7);
+                border-radius: vw-mobile(19);
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+                .filter-icon{
+                    height: vw-mobile(14);                
+                }
+            }
+            .filter-icon-container-choosed{
+                width: vw-mobile(38);
+                height: vw-mobile(38);
+                margin-left: vw-mobile(7);
+                border-radius: vw-mobile(19);
+                background-color: map-get($colors, primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+                .filter-icon{
+                    height: vw-mobile(14);            
+                }            
+            }
+            .dropdowns-container{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .dropdown-container{
+                    margin-right: 0;
+                }
+            }    
+        }
+    }
+    .job-list-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    } 
+    .pagination{
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: vw-mobile(25);
+        .paging{
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px vw-mobile(4) vw-mobile(10) rgba(0, 0, 0, 0.161);
+            .page-active{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw-mobile(45.99);
+                min-width: vw-mobile(45.99);
+                height: vw-mobile(35);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Gotham-Regular';
+                background-color: map-get($colors , primary);
+                font-size: vw-mobile(9);
+                line-height: vw-mobile(17);
+                border-radius: 0;
+                cursor: pointer;
+                color: #3C3B3B;
+            }
+            .page-inactive{
+                width: vw-mobile(45.99);
+                min-width: vw-mobile(45.99);
+                height: vw-mobile(35);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                font-family: 'Gotham-Regular';
+                justify-content: center;
+                font-size: vw-mobile(9);
+                line-height: vw-mobile(17);
+                border-radius: 0;
+                color: #3C3B3B;
+                cursor: pointer;
+            }
+            .page-inactive:hover{
+                background-color: map-get($colors , primary);
+                cursor: pointer;
+            }
+            .next-page{
+                width: vw-mobile(45.99);
+                min-width: vw-mobile(45.99);
+                height: vw-mobile(35);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0;
+                cursor: pointer;
+                .arrow-icon{
+                    font-size: vw-mobile(17);
+                    color: #3C3B3B;
+                }
+            }
+            .next-page:hover{
+                background-color: map-get($colors , primary);
+                cursor: pointer;
+            }
+        }        
+    }
+    .btn-column{
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        margin-bottom: vw-mobile(20);
+        .btn-assign{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100% !important;
+            height: vw-mobile(37) !important;
+            font-size: vw-mobile(13) !important;
+            line-height: vw-mobile(16) !important;
+            font-family: 'Lato-Regular';
+            background-color: map-get($colors , primary);
+            text-transform: none;
+            box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+            border-radius: vw-mobile(5);
+            margin-bottom: vw-mobile(10);
+            color: black;
+            cursor: pointer;
+        }
+        .btn-unassign{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100% !important;
+            height: vw-mobile(37) !important;
+            font-size: vw-mobile(13) !important;
+            line-height: vw-mobile(16) !important;
+            margin-bottom: vw-mobile(30);
+            font-family: 'Lato-Regular';
+            text-transform: none;
+            box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+            border-radius: vw-mobile(5);
+            background: #E6E6E6;
+            margin-bottom: vw-mobile(10);
+            cursor: pointer;
+        }
+        .btn-assign:hover {
+            background-color: map-get($colors, primary-dark);
+        }
+        .btn-unassign:hover{
+            background-color: rgba(230, 230, 230, 0.5);
+        }
+    }
+}

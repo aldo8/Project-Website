@@ -1,0 +1,167 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.selected-jobs {
+    display: flex;
+    padding: vw(10) vw(20);
+    height: 100%;
+    width: vw(406);
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.161);
+    border-radius: vw(5);
+    background-color: #FDFDFF;
+    .selected-jobs-title{
+        font-family: 'SFUIDisplay-Bold';
+        font-size: vw(20);
+        color: #3C3B3B;
+    }
+    .selected-jobs-list{
+        margin-top: vw(13.5);
+        overflow-y: scroll;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        .selected-jobs-detail-container{
+            display: flex;
+            width: vw(340);
+            height: vw(35);
+            border: solid vw(1) #707070;
+            border-radius: vw(5);
+            margin-bottom: vw(11);
+            flex-direction: row;
+            padding: vw(7) vw(10);
+            .selected-jobs-detail{
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: space-between;
+                .selected-jobs-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw(9);
+                    line-height: vw(11);
+                    color: #9A9A9A    
+                }
+                .selected-jobs-info{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(13);
+                    line-height: vw(17);
+                    color: black    
+                }
+            }
+            .selected-jobs-detail:last-child {
+                flex: 1.25
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .selected-jobs {
+        display: flex;
+        height: 100%;
+        width: 95%;
+        flex-direction: column;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.161);
+        border-radius: vw-tab(5);
+        background-color: #FDFDFF;
+        .selected-jobs-title{
+            font-family: 'SFUIDisplay-Bold';
+            font-size: vw-tab(20);
+            color: #3C3B3B;
+        }
+        .selected-jobs-list{
+            margin-top: vw-tab(13.5);
+            overflow-y: scroll;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            .selected-jobs-detail-container{
+                display: flex;
+                width: 90%;
+                height: vw-tab(40);
+                border: solid vw-tab(1) #707070;
+                border-radius: vw-tab(5);
+                margin-bottom: vw-tab(11);
+                flex-direction: row;
+                padding: vw-tab(7) vw-tab(10);
+                .selected-jobs-detail{
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .selected-jobs-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-tab(9);
+                        line-height: vw-tab(11);
+                        color: #9A9A9A    
+                    }
+                    .selected-jobs-info{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(13);
+                        line-height: vw-tab(17);
+                        color: black    
+                    }
+                }
+                .selected-jobs-detail:last-child {
+                    flex: 1.25
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .selected-jobs {
+        display: flex;
+        height: 100%;
+        width: 95%;
+        flex-direction: column;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.161);
+        border-radius: vw-mobile(5);
+        background-color: #FDFDFF;
+        .selected-jobs-title{
+            font-family: 'SFUIDisplay-Bold';
+            font-size: vw-mobile(12);
+            color: #3C3B3B;
+        }
+        .selected-jobs-list{
+            margin-top: vw-mobile(5);
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            .selected-jobs-detail-container{
+                display: flex;
+                width: 90%;
+                height: vw-mobile(23);
+                border: solid vw-mobile(1) #707070;
+                border-radius: vw-mobile(5);
+                margin-bottom: vw-mobile(5);
+                flex-direction: row;
+                padding: vw-mobile(2) vw-mobile(5);
+                .selected-jobs-detail{
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: vw-mobile(23);
+                    .selected-jobs-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-mobile(8);
+                        line-height: vw-mobile(10);
+                        color: #9A9A9A    
+                    }
+                    .selected-jobs-info{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(9);
+                        line-height: vw-mobile(11);
+                        color: black    
+                    }
+                }
+                .selected-jobs-detail:last-child {
+                    flex: 1.25
+                }
+            }
+        }
+    }
+}

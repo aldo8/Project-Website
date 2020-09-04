@@ -1,0 +1,449 @@
+@import '../../themes/colors';
+@import '../../themes/fonts';
+@import '../../themes/size';
+
+.login-page{
+  display: flex;
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.left-pane{
+  width: 50vw;
+  background-color: #3C3B3B;
+  background-size: 50vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  .login-bg{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    opacity: .25;
+    top: 0;
+  }
+  .logo-ut{
+    z-index: 1;
+    position: absolute;
+    top: vw(49);
+    left: vw(46);
+    width: vw(315);
+  }
+  .appname1{
+    z-index: 1;
+    font-size: vw(72);
+    font-family: 'SFUIDisplay-Bold';
+    color: map-get($colors , primary);
+    text-align: center;
+    letter-spacing: vw(5);
+    margin: 0;
+  }
+  .appname2{
+    z-index: 1;
+    font-size: vw(63);
+    font-family: 'SFUIDisplay-Regular';
+    letter-spacing: vw(19);
+    text-align: center;
+    color: white;
+    margin: 0;
+  }
+}
+
+.right-pane{
+  flex: 5;
+}
+
+.bar-color{
+  background-color: map-get($colors , primary) !important;
+}
+
+.movingasone{
+  position: absolute;
+  top: vw(39);
+  right: vw(46);
+  width: vw(205);
+}
+
+.login-form-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  .login-form-inner{
+    margin-top: vw(258);
+    margin-left: vw(124);
+    .login-title{
+      font-family: 'Roboto';
+      font-weight: bold;
+      font-size: vw(47);
+      line-height: vw(55);
+      margin: 0 0 vw(62) 0;
+    }
+    .login-form{
+      display: flex;
+      flex-direction: column;
+      
+      .username-label{
+        color: #3C3B3B;
+        font-family: 'SFUIDisplay-Regular';
+        letter-spacing: 0.05em;
+        font-size: vw(20);
+        opacity: 0.5;
+      }
+  
+      .username-input{
+        margin-top: vw(20);
+        width: vw(675);
+        padding-bottom: vw(26.5);
+      }
+
+      .username-input-text{
+        font-family: 'SFUIDisplay-Regular';
+        font-size: vw(22);
+        line-height: vw(26);
+        letter-spacing: 0.1em;
+        color: #3C3B3B;
+        padding: 0;
+      }
+  
+      .password-label{
+        margin-top: vw(60.5);
+        color: #3C3B3B;
+        font-family: 'SFUIDisplay-Regular';
+        letter-spacing: 0.05em;
+        font-size: vw(20);
+        opacity: 0.5;
+      }
+  
+      .password-input{
+        margin-top: 1.04vw;
+        font-size: 2.04vw;
+        width: 35.16vw;
+        padding-bottom: 1.38vw;
+      }
+
+      .visibility-icon{
+        position: absolute;
+        top: 30vw;
+        right: 9vw;
+        opacity: 0.5;
+        color: #444444;
+        font-size: vw(30);
+      }
+  
+      .btn-login{
+        margin-top: vw(61.5);
+        font-family: 'Lato-Bold';
+        font-size: vw(27);
+        line-height: vw(32);
+        border-radius: 2vw;
+        width: vw(309);
+        height: vw(78);
+        text-transform: none;
+        background-color: map-get($colors, primary);
+        transition: ease;
+        transition-duration: 0.5s;
+      }
+  
+      .btn-login:hover {
+        background-color: map-get($colors, primary-dark);
+      }
+  
+      .btn-login-disabled{
+        margin-top: vw(61.5);
+        font-family: 'Lato-Bold';
+        font-size: vw(27);
+        line-height: vw(32);
+        border-radius: 2vw;
+        width: vw(309);
+        height: vw(78);
+        text-transform: none;
+        opacity: 0.5;
+        color: black;
+        background-color: map-get($colors, primary);
+      }
+  
+      .arrow-icon{
+        margin-top: 0.3vw;
+        width: 1vw;
+      }
+    }
+  }
+}
+
+//mobile version
+@media (max-width: 599px){
+  .login-page-mobile{
+    display: flex;
+    flex-direction: column;
+    background-color: #3C3B3B;
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    .login-bg{
+      width: 150%;
+      position: absolute;
+      z-index: 0;
+      height: 100%;
+      opacity: .3;
+      top: 0;
+    }
+    .logo-ut{
+      z-index: 1;
+      width: vw-mobile(209);
+      height: vw-mobile(41);
+      margin-top: 7vh;
+    }
+    .movingasone{
+      z-index: 1;
+      position: relative;
+      margin-top: vw-mobile(45);
+      margin-bottom: 20vh;
+      width: vw-mobile(167);
+      height: vw-mobile(50.35);
+    }
+    .login-form-container{
+      z-index: 1;
+      width: vw-mobile(286);
+      height: vw-mobile(371);
+      margin-top: vw-mobile(32);
+      background: #FFFFFF;
+      box-shadow: 0px vw-mobile(4) vw-mobile(20) rgba(59, 59, 59, 0.25);
+      border-radius: vw-mobile(7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dca-logo{
+        margin-top: vw-mobile(39);
+        width: vw-mobile(184.08);
+        height: vw-mobile(40.27);
+      }
+      .login-form{
+        display: flex;
+        flex-direction: column;
+        margin-top: vw-mobile(51.73);
+        width: vw-mobile(243);
+        position: relative;
+        .visibility-icon{
+          position: absolute;
+          top: vw-mobile(92);
+          right: vw(10);
+          opacity: 0.5;
+          color: #444444;
+          font-size: vw-mobile(18.56);
+        }
+        .username-label{
+          color: #3C3B3B;
+          font-family: 'SFUIDisplay-Regular';
+          letter-spacing: 0.05em;
+          font-size: vw-mobile(14);
+          line-height: vw-mobile(17);
+          opacity: 0.5;
+        }
+        .username-input{
+          margin-top: vw-mobile(5);
+          width: 100%;
+          padding-bottom: vw-mobile(8);
+        }
+        .username-input-text{
+          font-family: 'SFUIDisplay-Regular';
+          font-size: vw-mobile(16);
+          line-height: vw-mobile(18);
+          letter-spacing: 0.1em;
+          color: #3C3B3B;
+          padding: 0;
+        }
+        .password-label{
+          margin-top: vw-mobile(21);
+          color: #3C3B3B;
+          font-family: 'SFUIDisplay-Regular';
+          letter-spacing: 0.05em;
+          font-size: vw-mobile(14);
+          line-height: vw-mobile(17);
+          opacity: 0.5;
+        }
+        .password-input{
+          margin-top: vw-mobile(5);
+          width: 100%;
+          padding-bottom: vw-mobile(8);
+        }
+        .btn-login{
+          margin-top: vw-mobile(46);
+          font-family: 'Lato-Bold';
+          font-size: vw-mobile(16);
+          line-height: vw-mobile(19);
+          border-radius: vw-mobile(21);
+          width: vw-mobile(244);
+          height: vw-mobile(42);
+          text-transform: none;
+          background-color: map-get($colors, primary);
+          transition: ease;
+          transition-duration: 0.5s;
+          box-shadow: none;
+        }
+        .btn-login:hover {
+          background-color: map-get($colors, primary-dark);
+        }
+        .btn-login-disabled{
+          margin-top: vw-mobile(46);
+          font-family: 'Lato-Bold';
+          font-size: vw-mobile(16);
+          line-height: vw-mobile(19);
+          border-radius: vw-mobile(21);
+          width: vw-mobile(244);
+          height: vw-mobile(42);
+          text-transform: none;
+          opacity: 0.5;
+          color: black;
+          background-color: map-get($colors, primary);
+        }
+        .arrow-icon{
+          width: vw-mobile(13);
+          height: vw-mobile(10);
+        }
+      }
+    }
+  }
+}
+
+//tab version
+@media (min-width: 600px) and (max-width: 1025px){
+  .login-page-mobile{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-color: #3C3B3B;
+    width: 100vw;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .login-bg{
+      width: 115%;
+      position: absolute;
+      z-index: 0;
+      height: 100%;
+      opacity: .3;
+      top: 0;
+    }
+    .logo-ut{
+      z-index: 1;
+      width: vw-tab(375);
+      height: vw-tab(75);
+      margin-top: 17vh;
+    }
+    .movingasone{
+      position: relative;
+      z-index: 1;
+      margin-top: vw-tab(88);
+      margin-bottom: 20vh;
+      width: vw-tab(243.73);
+      height: vw-tab(73.49);
+    }
+    .login-form-container{
+      z-index: 1;
+      width: vw-tab(398);
+      height: vw-tab(371);
+      margin-top: vw-tab(86);
+      background: #FFFFFF;
+      box-shadow: 0px vw-tab(4) vw-tab(20) rgba(59, 59, 59, 0.25);
+      border-radius: vw-tab(7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dca-logo{
+        margin-top: vw-tab(39);
+        width: vw-tab(184.08);
+        height: vw-tab(40.27);
+      }
+      .login-form{
+        display: flex;
+        flex-direction: column;
+        margin-top: vw-tab(51.73);
+        width: vw-tab(243);
+        position: relative;        
+        .visibility-icon{
+          position: absolute;
+          top: vw-tab(92);
+          right: vw-tab(0);
+          opacity: 0.5;
+          color: #444444;
+          font-size: vw-tab(18.56);
+        }
+        .username-label{
+          color: #3C3B3B;
+          font-family: 'SFUIDisplay-Regular';
+          letter-spacing: 0.05em;
+          font-size: vw-tab(14);
+          line-height: vw-tab(17);
+          opacity: 0.5;
+        }
+        .username-input{
+          margin-top: vw-tab(5);
+          width: 100%;
+          padding-bottom: vw-tab(8);
+        }
+        .username-input-text{
+          font-family: 'SFUIDisplay-Regular';
+          font-size: vw-tab(16);
+          line-height: vw-tab(18);
+          letter-spacing: 0.1em;
+          color: #3C3B3B;
+          padding: 0;
+        }
+        .password-label{
+          margin-top: vw-tab(21);
+          color: #3C3B3B;
+          font-family: 'SFUIDisplay-Regular';
+          letter-spacing: 0.05em;
+          font-size: vw-tab(14);
+          line-height: vw-tab(17);
+          opacity: 0.5;
+        }
+        .password-input{
+          margin-top: vw-tab(5);
+          width: 100%;
+          padding-bottom: vw-tab(8);
+        }
+        .btn-login{
+          margin-top: vw-tab(46);
+          font-family: 'Lato-Bold';
+          font-size: vw-tab(16);
+          line-height: vw-tab(19);
+          border-radius: vw-tab(21);
+          width: vw-tab(244);
+          height: vw-tab(42);
+          text-transform: none;
+          background-color: map-get($colors, primary);
+          transition: ease;
+          transition-duration: 0.5s;
+          box-shadow: none;
+        }
+        .btn-login:hover {
+          background-color: map-get($colors, primary-dark);
+        }
+        .btn-login-disabled{
+          margin-top: vw-tab(46);
+          font-family: 'Lato-Bold';
+          font-size: vw-tab(16);
+          line-height: vw-tab(19);
+          border-radius: vw-tab(21);
+          width: vw-tab(244);
+          height: vw-tab(42);
+          text-transform: none;
+          opacity: 0.5;
+          color: black;
+          background-color: map-get($colors, primary);
+        }
+        .arrow-icon{
+          width: vw-tab(13);
+          height: vw-tab(10);
+        }
+      }
+    }
+  }
+}

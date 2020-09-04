@@ -1,0 +1,405 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.job-assignment-container{
+    margin-top: vw(35);
+    .job-assignment-expand{
+        width: vw(1553);
+        border-radius: vw(10) !important;
+        box-shadow: none;
+        .job-assignment-header{
+            margin: 0;
+        }
+        .job-assignment-header-expanded{
+            border-top-left-radius: vw(10) !important;
+            border-top-right-radius: vw(10) !important;
+            background-color: map-get($colors, primary);
+            margin: 0 !important;
+            height: vw(36) !important;
+            min-height: vw(36) !important;
+            display: flex !important;
+            align-items: center !important;
+            padding-left: vw(17);
+            padding-right: vw(20);
+            .job-assignment-title{
+                font-family: 'SFUIDisplay-Bold';
+                font-size: vw(19);
+                line-height: vw(23);
+            }  
+            .expand-icon{
+                font-size: vw(30);
+            }          
+        }
+        .job-assignment-header-icon{
+            font-weight: bold;
+            color: #3C3B3B;
+        }
+        .job-assignment-detail{
+            display: flex;
+            flex-direction: row;
+            padding: vw(23.75) vw(15);
+            flex: 1;
+            font-family: 'Lato-Regular';
+            .assignment-container{
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+            }
+            .handover-container{
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+            }
+            .timeline-label{
+                width: vw(115);
+                p{
+                    font-family: 'SFUIText-Regular';
+                    margin: 0;
+                    font-size: vw(12);
+                    line-height: vw(14);
+                    text-align: right;
+                    font-weight: bold;
+                    margin-top: vw(8);
+                    color: #1D1D1D;
+                }
+            }
+            .timeline-icon{
+                margin-left: vw(28);
+                height: vw(130);
+                
+            }
+            .jobs-assignment-creator{
+                display: flex;
+                flex-direction: column;
+                margin-left: vw(28);
+                width: vw(225);
+                .jobs-assignment-creator-title{
+                    color: #3C3B3B;
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw(19);
+                    line-height: vw(22);
+                    margin: vw(10) 0 0 0;
+                }
+                .jobs-assignment-creator-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw(10);
+                    line-height: vw(12);
+                    margin: vw(10.65) 0 0 0;
+                    color: #9A9A9A;
+                    width: vw(175);
+                }
+                .jobs-assignment-creator-value{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(12);
+                    line-height: vw(14);
+                    margin: vw(3.68) 0 vw(6.55) 0;
+                }
+            }
+            .jobs-assignment-target{
+                margin-left: vw(10);
+                .jobs-assignment-target-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw(10);
+                    line-height: vw(12);
+                    margin: vw(40) 0 vw(5.68) 0;
+                    color: #9A9A9A;
+                }
+                .jobs-assignment-target-value{
+                    margin: 0 0 vw(7) 0;
+                    color: #3C3B3B;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(12);
+                    line-height: vw(14);
+                    .img-star{
+                        height: vw(8);
+                        width: vw(8);
+                        margin-left: -vw(2);
+                    }
+                    .img-dot{
+                        width: vw(6);
+                        height: vw(6);
+                        margin-left: vw(1)
+                    }
+                    .label-name{
+                        padding-left: vw(6);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {       
+    .job-assignment-container{
+        margin-top: vw-tab(20);
+        .job-assignment-expand{
+            width: 100%;
+            border-radius: vw-tab(5) !important;
+            box-shadow: none;
+            .job-assignment-header{
+                margin: 0;
+            }
+            .job-assignment-header-expanded{
+                border-top-left-radius: vw-tab(5) !important;
+                border-top-right-radius: vw-tab(5) !important;
+                background-color: map-get($colors, primary);
+                margin: 0 !important;
+                height: vw-tab(32) !important;
+                min-height: vw-tab(32) !important;
+                display: flex !important;
+                align-items: center !important;
+                padding-left: vw-tab(15);
+                padding-right: vw-tab(15);
+                .job-assignment-title{
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw-tab(16);
+                    line-height: vw-tab(19);
+                }  
+                .expand-icon{
+                    font-size: vw-tab(30);
+                }          
+            }
+            .job-assignment-header-icon{
+                font-weight: bold;
+                color: #3C3B3B;
+            }
+            .job-assignment-detail{
+                display: flex;
+                flex-direction: column;
+                padding: vw-tab(23.75) vw-tab(25);
+                flex: 1;
+                justify-content: flex-start;
+                font-family: 'Lato-Regular';                
+                .assignment-container{
+                    display: flex;
+                    flex-direction: row;
+                    flex: 1;
+                }
+                .handover-container{
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: vw-tab(30);
+                    flex: 1;
+                }
+                .timeline-label{
+                    width: vw-tab(115);
+                    p{
+                        font-family: 'SFUIText-Regular';
+                        margin: 0;
+                        font-size: vw-tab(12);
+                        line-height: vw-tab(14);
+                        text-align: right;
+                        font-weight: bold;
+                        margin-top: vw-tab(8);
+                        color: #1D1D1D;
+                    }
+                }
+                .timeline-icon{
+                    margin-left: vw-tab(20);
+                    img{
+                        height: vw-tab(130);
+                    }
+                }
+                .jobs-assignment-creator{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: vw-tab(20);
+                    width: vw-tab(215);
+                    .jobs-assignment-creator-title{
+                        color: #3C3B3B;
+                        font-family: 'SFUIDisplay-Bold';
+                        font-size: vw-tab(19);
+                        line-height: vw-tab(22);
+                        margin: vw-tab(10) 0 0 0;
+                    }
+                    .jobs-assignment-creator-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-tab(10);
+                        line-height: vw-tab(12);
+                        margin: vw-tab(10.65) 0 0 0;
+                        color: #9A9A9A;
+                    }
+                    .jobs-assignment-creator-value{
+                        font-family: 'SFUIText-Bold';
+                        width: 95%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: vw-tab(12);
+                        line-height: vw-tab(14);
+                        margin: vw-tab(3.68) 0 vw-tab(6.55) 0;
+                    }
+                }
+                .jobs-assignment-target{
+                    margin-left: vw-tab(10);
+                    width: vw-tab(225);
+                    .jobs-assignment-target-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-tab(10);
+                        line-height: vw-tab(12);
+                        margin: vw-tab(40) 0 vw-tab(5.68) 0;
+                        color: #9A9A9A;
+                    }
+                    .jobs-assignment-target-value{
+                        margin: 0 0 vw-tab(7) 0;
+                        color: #3C3B3B;
+                        font-family: 'SFUIText-Bold';
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: vw-tab(12);
+                        line-height: vw-tab(14);
+                        white-space: nowrap;
+                        .img-star{
+                            height: vw-tab(8);
+                            width: vw-tab(8);
+                            margin-left: -vw-tab(2);
+                        }
+                        .img-dot{
+                            width: vw-tab(6);
+                            height: vw-tab(6);
+                            margin-left: vw-tab(1)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {       
+    .job-assignment-container{
+        margin-top: vw-mobile(15);
+        .job-assignment-expand{
+            width: 100%;
+            border-radius: vw-mobile(5) !important;
+            box-shadow: none;
+            .job-assignment-header{
+                margin: 0;
+            }
+            .job-assignment-header-expanded{
+                border-top-left-radius: vw-mobile(5) !important;
+                border-top-right-radius: vw-mobile(5) !important;
+                background-color: map-get($colors, primary);
+                margin: 0 !important;
+                height: vw-mobile(32) !important;
+                min-height: vw-mobile(32) !important;
+                display: flex !important;
+                align-items: center !important;
+                padding-left: vw-mobile(10);
+                padding-right: vw-mobile(10);
+                .job-assignment-title{
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw-mobile(16);
+                    line-height: vw-mobile(19);
+                }  
+                .expand-icon{
+                    font-size: vw-mobile(27);
+                }          
+            }
+            .job-assignment-header-icon{
+                font-weight: bold;
+                color: #3C3B3B;
+            }
+            .job-assignment-detail{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                justify-content: flex-start;
+                font-family: 'Lato-Regular';               
+                .assignment-container{
+                    display: flex;
+                    flex-direction: row;
+                    flex: 1;
+                }
+                .handover-container{
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: vw-tab(30);
+                    flex: 1;
+                }
+                .timeline-label{
+                    width: vw-mobile(70) !important;
+                    p{
+                        font-family: 'SFUIText-Regular';
+                        margin: 0;
+                        font-size: vw-mobile(8);
+                        line-height: vw-mobile(9);
+                        text-align: right;
+                        font-weight: bold;
+                        margin-top: vw-mobile(8);
+                        color: #1D1D1D;
+                    }
+                }
+                .timeline-icon{
+                    margin-left: vw-mobile(7);
+                    img{
+                        height: vw-mobile(75);
+                    }
+                }
+                .jobs-assignment-creator{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: vw-mobile(7);
+                    width: vw-mobile(80);
+                    .jobs-assignment-creator-title{
+                        color: #3C3B3B;
+                        font-family: 'SFUIDisplay-Bold';
+                        font-size: vw-mobile(12);
+                        line-height: vw-mobile(14);
+                        margin: vw-mobile(5) 0 0 0;
+                    }
+                    .jobs-assignment-creator-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-mobile(7);
+                        line-height: vw-mobile(8);
+                        margin: vw-mobile(5) 0 0 0;
+                        color: #9A9A9A;
+                        width: 100%;
+                    }
+                    .jobs-assignment-creator-value{
+                        font-family: 'SFUIText-Bold';
+                        width: 95%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: vw-mobile(8);
+                        line-height: vw-mobile(9);
+                        margin: vw-mobile(3.68) 0 vw-mobile(6.55) 0;
+                    }
+                }
+                .jobs-assignment-target{
+                    margin-left: vw-mobile(7);
+                    width: vw-mobile(115);
+                    .jobs-assignment-target-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-mobile(7);
+                        line-height: vw-mobile(8);
+                        margin: vw-mobile(23) 0 vw-mobile(5.68) 0;
+                        color: #9A9A9A;
+                    }
+                    .jobs-assignment-target-value{
+                        margin: 0 0 vw-mobile(7) 0;
+                        color: #3C3B3B;
+                        font-family: 'SFUIText-Bold';
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: vw-mobile(8);
+                        line-height: vw-mobile(9);
+                        white-space: nowrap;
+                        .img-star{
+                            height: vw-mobile(8);
+                            width: vw-mobile(8);
+                            margin-left: -vw-mobile(2);
+                        }
+                        .img-dot{
+                            width: vw-mobile(6);
+                            height: vw-mobile(6);
+                            margin-left: vw-mobile(1)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

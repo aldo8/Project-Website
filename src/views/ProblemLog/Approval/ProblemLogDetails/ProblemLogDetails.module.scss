@@ -1,0 +1,1628 @@
+@import '../../../../themes/fonts';
+@import '../../../../themes/colors';
+@import '../../../../themes/size';
+
+.sub-app-bar{
+    position: fixed;
+    width: 100vw;
+    height: vw(27);
+    z-index: 999;
+    background: #ffffff;
+    margin-top: vw(88);
+    border-top: vw(1) solid rgba(0, 0, 0, 0.11);
+    padding-left: vw(297);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .link{
+        margin: 0;
+        color: #4DA1FF;
+        font-family: 'Lato-Bold';
+        font-size: vw(14);
+        line-height: vw(17);
+        height: fit-content;
+        text-decoration: none;
+        margin-right: vw(8);
+    }
+    .not-link{
+        margin: 0;
+        font-family: 'Lato-Bold';
+        color: #3C3B3B;
+        font-size: vw(14);
+        line-height: vw(17);
+        height: fit-content;
+        margin-right: vw(8);
+    }
+    .arrow-right{
+        color: #4DA1FF;
+        font-size: vw(14);
+        height: fit-content;
+        margin-top: vw(3);
+        margin-right: vw(8);
+    }
+}
+
+.problem-log-detail-page-content{
+    overflow-y: scroll;  
+    padding-left: 16vw;
+    padding-top: vw(145);
+    padding-right: 2vw;
+    .problem-log-detail{
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+    }
+}
+
+.save-modal{
+        width: vw(519);
+        height: 13.97917vw;
+        background-color: white;
+        margin-top: 15vw;
+        margin-left:35vw;
+        border-radius: vw(15);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: vw(15) vw(24) vw(30) vw(24);
+    .close-btn-row{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        .close-btn{
+            height: 1.56vw;
+            width: 1.56vw;
+            background-image: url('../../../../assets/images/close.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .close-btn:hover{
+            background-image: url('../../../../assets/images/close-hover.png');
+        }
+    }
+    .title-modal-row{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1;
+        width: 100%;
+        .title-modal-label{
+            margin: 0;
+            // margin-bottom: vw(70);
+            font-size: vw(33);
+            font-family: 'SFUIDisplay-Bold';
+            color: #3C3B3B;
+            // padding-top:vw(10)
+        }
+        .title-modal-approval{
+            margin:0;
+            margin-bottom: vw(70);
+            font-size: vw(33);
+            font-family: 'SFUIDisplay-Bold';
+            color: #3C3B3B;
+
+        }
+        .image-content{
+            width:vw(135);
+            background-repeat:no-repeat;
+            background-size: contain;
+            margin-top: vw(16);
+            margin-bottom: vw(25);
+        }
+        .confirmation-approval-caption{
+            margin: 0;
+            font-size: vw(20);
+            font-family: 'SFUIDisplay-Regular';
+            opacity: 0.5;
+            text-align: center;
+            color: #3C3B3B;
+        }
+    }
+    .text-modal-row{
+        display: flex;
+        justify-content: center;
+        padding: 1vw;
+        .text-field{
+            width: 90%;
+        }
+    }
+    .image-modal-row{
+        display:flex;
+        justify-content: center;
+        padding: vw(16) 0 0;
+        // .image-content{
+        //     width: vw(135);
+        //     margin-top: vw(16);
+        //     margin-bottom: vw(25);
+        //     // height: vw(161.41);
+        //     // width: vw(192.62);
+        //     background-image: url('../../../../assets/images/success.png');
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        // }
+        .image-content-approve{
+            height: vw(161.41);
+            width: vw(192.62);
+            background-image: url('../../../../assets/images/approve.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .image-content-reject{
+            height: vw(161.41);
+            width: vw(192.62);
+            background-image: url('../../../../assets/images/reject.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .text-modal-row{
+        display:flex;
+        justify-content: center;
+        padding: vw(25) 0 vw(20);
+        .text-modal-content{
+            margin: 0;
+            font-size: vw(20);
+            font-family: 'SFUIDisplay-Regular';
+            opacity: 0.5;
+            text-align: center;
+            color: #3C3B3B;
+        }
+    }
+    .button-modal-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .btn-yes{
+            background-color: #FFD500;
+            justify-self: flex-start;
+            margin-right: vw(10);
+            text-align: center;
+            width: vw(165);
+            padding: vw(15) 0;
+            text-transform: none;
+            font-size: vw(20);
+            font-family: 'SFUIDisplay-Regular';
+            border-radius: vw(5);
+            font-weight: 600;
+            margin-left: vw(30);
+            cursor: pointer;
+        }
+        .btn-no{
+            border: vw(2) solid #707070;
+            justify-self: flex-end;
+            margin-right: vw(10);
+            text-align: center;
+            width: vw(165);
+            padding: vw(15) 0;
+            text-transform: none;
+            font-size: vw(20);
+            font-family: 'SFUIDisplay-Regular';
+            border-radius: vw(5);
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-loading{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: vw(176) !important;
+            height: vw(44) !important;
+            font-size: vw(13) !important;
+            line-height: vw(16) !important;
+            font-family: 'SFUIText-Bold';
+            background-color: map-get($colors , primary);
+            text-transform: none;
+            box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+            border-radius: 0.4vw;
+            cursor: no-drop;
+            pointer-events:none;
+        }
+        .btn-yes:hover {
+            background-color: map-get($colors, primary-dark);
+        }
+        .btn-no:hover {
+            background-color: #e1e1e1;
+        }
+    }
+}
+
+.problem-log-detail-card {
+    width: vw(1160);
+    height: vw(820);
+    display: flex;
+    .problem-log-card-content{
+        max-width: 93%;
+        padding: vw(36) vw(43) 0 vw(59);
+        flex: 1;
+        .problem-log-card-title-row{
+            display: flex;
+            flex-direction: row;
+            border-bottom-style: dotted;
+            border-bottom-color: #54677E;
+            border-bottom-width: vw(2);
+            .problem-log-card-title{
+                font-size: vw(25);
+                line-height: vw(30);
+                font-family: 'SFUIText-Bold';
+                margin: 0;
+                padding-bottom: vw(21);
+            }
+            .edit-container{
+                margin: 0;
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .edit-icon{
+                    margin: 0;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(21);
+                    line-height: vw(25);
+                    color: #76D672;
+                    cursor: pointer;
+                }
+                .edit-icon:hover{
+                    color: #5ebe5a;
+                }
+            }
+        }
+        .problem-log-content-container{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            margin-top: vw(4.8);
+            .problem-card-detail-left{
+                max-width: 45vw;
+                flex: 1;
+            }
+            .problem-card-detail-right{
+                flex: 1;
+            }
+            .problem-card-detail-label-big{
+                font-family: 'SFUIText-Bold';
+                font-size: vw(20);
+                line-height: vw(24);
+                width: 80%;
+            }
+            .problem-card-detail-label-big-30{
+                font-family: 'SFUIText-Bold';
+                font-size: vw(20);
+                line-height: vw(12);
+                padding-top: vw(30);
+            }
+            .problem-log-line-container{
+                /* width: vw(5);
+                background-color: #54677E;
+                //height: 100%;
+                float: left;
+                border-radius: 5px; */
+                border-left: 3px solid #54677E;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                .form-control{
+                    padding-left: vw(20);
+                }
+                .problem-card-detail-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw(13);
+                    line-height: vw(16);
+                    color: #9A9A9A;
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 vw(16);
+                }
+                .problem-card-detail-label-mid{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw(13);
+                    line-height: vw(16);
+                    color: #9A9A9A;
+                    margin: vw(19.54) 0 0 0;
+                    padding: 0 0 0 vw(16);
+                }
+                .problem-card-detail-text{
+                    font-family: 'SFUIText-Bold';
+                    width: 90%;
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    margin: vw(8.46) 0 0 0;
+                    color: #3C3B3B;
+                    padding: 0 vw(16) 0 vw(16);
+                }
+                .problem-card-detail-input{
+                    padding: vw(6) 0 0;
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    font-family: 'SFUIText-Bold';
+                }
+                .problem-card-detail-input-root{
+                    width: 90%;
+                    margin-left: vw(16);
+                }
+                .form-control-error{
+                    width: 100%;
+                }
+                .form-error-helper{
+                    margin-left: vw(16);
+                }
+                .problem-edit-dropdown {
+                    position: relative;
+                    display: inline-block;
+                    background-color: #ffffff;
+                    width: 50%;
+                    height: vw(38.07);
+                    margin-left: vw(16);
+                    border-radius: 0.5vw;
+                    box-shadow: 0px 0.2vw 0.6vw rgba(0, 0, 0, 0.161);
+                }
+                .problem-dropdown-button {
+                    position: relative;
+                    background-color: #ffffff;
+                    border-radius: 0.4vw;
+                    display: flex;
+                    align-items: center;
+                    height: vw(38.07);
+                    .problem-dropdown-selected-item{
+                        margin: 0 0 0 1vw;
+                        display: flex;
+                        flex-direction: row;
+                        white-space: nowrap;
+                        height: 3vw;
+                        align-items: center;
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw(14);
+                        line-height: vw(17);
+                        font-weight: 500;
+                        overflow: hidden;
+                        color: #3C3B3B;
+                        .problem-expand-icon-container{
+                            background-color: map-get($colors, primary);
+                            position: absolute;
+                            right: 0;
+                            height: 100%;
+                            width: 20%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-bottom-right-radius: 0.4vw;
+                            border-top-right-radius: 0.4vw;
+                            .problem-expand-icon{
+                                font-size: vw(25);
+                            }
+                        }
+                    }
+                }
+                
+                .problem-list-items {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 1vw 0 1vw 0;
+                    top: 2.1vw;
+                    right: 0px;
+                    width: 100%;
+                    background-color: white;
+                    position: absolute;
+                    box-shadow: 0px 0.3vw 0.6vw 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    //font-weight: 500;
+                    color: #3C3B3B;
+                    max-height: vw(130); 
+                    overflow: auto;
+                    li {
+                        padding: 0.5vw 1vw;
+                        color: #000;
+                    }
+                    li:hover {
+                        background-color: #e5e5e5;
+                        color: #000;
+                    }
+                }
+            }
+            .problem-log-delay-container{
+                border-left: 3px solid #54677E;
+                display: flex;
+                flex: 1;
+                .start-container{
+                    flex: 1;
+                    margin: 0 0 0 vw(16);
+                }
+                .end-container{
+                    flex: 1;
+                    margin: 0 0 0 vw(16);
+                }
+                .error-date{
+                    margin: 0;
+                    font-size: 0.75rem;
+                    margin-top: 8px;
+                    min-height: 1em;
+                    text-align: left;
+                    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                    font-weight: 400;
+                    line-height: 1em;
+                    letter-spacing: 0.03333em;
+                    color: #f44336;
+                }
+                .delay-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw(13);
+                    line-height: vw(16);
+                    color: #9A9A9A;
+                    margin: 0 0 0 0;
+                    //padding: 0 0 0 vw(16);
+                }
+                .dt-input{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    outline: 0;
+                    border-width: 0 0 1px;
+                    border-color:black
+                }
+                .delay-text{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    margin: vw(8.46) 0 0 0;
+                    color: #3C3B3B;
+                    //padding: 0 0 0 vw(16);
+                }
+                .dt-input{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    outline: 0;
+                    border-width: 0 0 1px;
+                    border-color:black
+                }
+                .dt-input-error{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(17);
+                    outline: 0;
+                    border-width: 0 0 2px;
+                    border-color:#f44336
+                }
+                .dt-input:hover, .dt-input:focus{
+                    border-width: 0 0 2px;
+                    border-color:black
+                }
+            }
+        }
+        .bottom-row{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            margin-top: 1vw;
+            justify-content: flex-end;
+            .btn-approve{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw(176) !important;
+                height: vw(44) !important;
+                font-size: vw(13) !important;
+                line-height: vw(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , primary);
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: pointer;
+                margin-right: vw(15);
+            }
+            .btn-reject{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw(176) !important;
+                height: vw(44) !important;
+                font-size: vw(13) !important;
+                line-height: vw(16) !important;
+                font-family: 'SFUIText-Bold';
+                // background-color: map-get($colors , primary);
+                text-transform: none;
+                // box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border: 1px solid #000000;
+                border-radius: 0.4vw;
+                cursor: pointer;
+            }
+            .btn-cancel{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw(176) !important;
+                height: vw(44) !important;
+                font-size: vw(13) !important;
+                line-height: vw(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , danger);
+                text-transform: none;
+                color: map-get($colors , light);
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                //border: 1px solid #000000;
+                border-radius: 0.4vw;
+                cursor: pointer;
+            }
+            .btn-loading{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw(176) !important;
+                height: vw(44) !important;
+                font-size: vw(13) !important;
+                line-height: vw(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , primary);
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: progress;
+                pointer-events:none;
+                margin-right: vw(15);
+            }
+            .btn-approve:hover {
+                background-color: map-get($colors, primary-dark);
+            }
+            .btn-reject:hover {
+                background-color: map-get($colors, gray);
+            }
+            .btn-cancel:hover {
+                background-color: #c22f2f;
+            }
+        }
+    }
+}
+
+.problem-card-detail-remarks{
+    font-family: 'SFUIText-Bold';
+    width: 95%;
+    font-size: 0.72917vw;
+    //line-height: 0.88542vw;
+    margin: 0.44063vw 0 0 0;
+    color: #3C3B3B;
+    padding: 0 0.83333vw 0 0.83333vw;
+}
+
+// TAB
+@media (min-width: 600px) and (max-width: 1200px) {
+    .sub-app-bar{
+        position: fixed;
+        width: 100vw;
+        height: vw-tab(30);
+        z-index: 999;
+        background: #ffffff;
+        margin-top: vw-tab(88);
+        border-top: vw-tab(1) solid rgba(0, 0, 0, 0.11);
+        padding-left: vw-tab(30);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .link{
+            margin: 0;
+            color: #4DA1FF;
+            font-family: 'Lato-Bold';
+            font-size: vw-tab(15);
+            line-height: vw-tab(1);
+            height: fit-content;
+            text-decoration: none;
+            margin-right: 0.3vw;
+        }
+        .not-link{
+            margin: 0;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw-tab(15);
+            line-height: vw-tab(1);
+            height: fit-content;
+            margin-right: 0.3vw;
+        }
+        .arrow-right{
+            color: #4DA1FF;
+            font-size: vw-tab(15);
+            height: fit-content;
+            margin-top: 0.1vw;
+            margin-right: 0.3vw;
+        }
+    }
+    
+    .problem-log-detail-page-content{
+        padding-left: vw-tab(20);
+        padding-top: vw-tab(140);
+        padding-right: vw-tab(10);
+        height: 200vw;
+        .problem-log-detail{
+            flex: 1;
+            flex-direction: row;
+            display: flex;
+        }
+    }
+    
+    .save-modal{
+        width: vw-tab(390);
+        background-color: white;
+        margin: auto;
+        border-radius: 0.5vw;
+        display: flex;
+        flex-direction: column;
+        padding: 1vw 1.5vw 2vw 1.5vw;
+        .close-btn-row{
+            display: flex;
+            justify-content: flex-end;
+            .close-btn{
+                height: 3vw;
+                width: 3vw;
+                background-image: url('../../../../assets/images/close.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .close-btn:hover{
+                background-image: url('../../../../assets/images/close-hover.png');
+            }
+        }
+        .title-modal-row{
+            display: flex;
+            justify-content: center;
+            .title-modal-label{
+                font-family: 'SFUIText-Bold';
+                font-size: vw-tab(30);
+                line-height: vw-tab(39);
+            }
+        }
+        .image-modal-row{
+            display:flex;
+            justify-content: center;
+            padding: vw-tab(16) 0 0;
+            .image-content{
+                height: vw-tab(120.41);
+                width: vw-tab(142.62);
+                background-image: url('../../../../assets/images/success.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .image-content-approve{
+                height: vw-tab(120.41);
+                width: vw-tab(142.62);
+                background-image: url('../../../../assets/images/approve.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .image-content-reject{
+                height: vw-tab(121.41);
+                width: vw-tab(142.62);
+                background-image: url('../../../../assets/images/reject.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+        .text-modal-row{
+            display:flex;
+            justify-content: center;
+            padding: vw-tab(25) 0 vw-tab(20);
+            .text-modal-content{
+                font-family: 'SFUIText-Regular';
+                font-size: vw-tab(13);
+                line-height: vw-tab(17);
+                text-align: center;
+                color: grey;
+            }
+        }
+        .button-modal-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0 0 vw-tab(10) 0;
+            .btn-yes{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: vw-tab(100.99) !important;
+                height: vw-tab(35.3) !important;
+                font-size: vw-tab(13) !important;
+                line-height: vw-tab(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , primary);
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: pointer;
+                margin-left: vw-tab(15);
+            }
+            .btn-no{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw-tab(100.99) !important;
+                height: vw-tab(35.3) !important;
+                font-size: vw-tab(13) !important;
+                line-height: vw-tab(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: #F2F2F4;
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: pointer;
+            }
+            .btn-loading{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: vw-tab(100.99) !important;
+                height: vw-tab(35.3) !important;
+                font-size: vw-tab(13) !important;
+                line-height: vw-tab(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , primary);
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: no-drop;
+                pointer-events:none;
+            }
+            .btn-yes:hover {
+                background-color: map-get($colors, primary-dark);
+            }
+            .btn-no:hover {
+                background-color: #e1e1e1;
+            }
+        }
+    }
+    
+    .problem-log-detail-card {
+        width: vw-tab(720.92);
+        height: vw-tab(550);
+        display: flex;
+        .problem-log-card-content{
+            max-width: 95%;
+            padding: vw-tab(20) vw-tab(20) 0 vw-tab(20);
+            flex: 1;
+            .problem-log-card-title-row{
+                display: flex;
+                flex-direction: row;
+                border-bottom-style: dotted;
+                border-bottom-color: #54677E;
+                border-bottom-width: vw(2);
+                .problem-log-card-title{
+                    font-size: vw-tab(16);
+                    //line-height: vw-tab(0);
+                    font-family: 'SFUIText-Bold';
+                    margin: 0;
+                    padding-bottom: vw-tab(10);
+                }
+                .edit-container{
+                    margin: 0;
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .edit-icon{
+                        margin: 0;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(16);
+                        //line-height: vw-tab(5);
+                        //padding-bottom: vw-tab(5);
+                        color: #76D672;
+                        cursor: pointer;
+                    }
+                    .edit-icon:hover{
+                        color: #5ebe5a;
+                    }
+                }
+            }
+            .problem-log-content-container{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw(4.8);
+                .problem-card-detail-left{
+                    max-width: 45vw;
+                    flex: 1;
+                }
+                .problem-card-detail-right{
+                    max-width: 45vw;
+                    flex: 1;
+                }
+                .problem-card-detail-label-big{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-tab(16);
+                    line-height: vw-tab(5);
+                    padding-top: vw-tab(10);
+                }
+                .problem-card-detail-label-big-30{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-tab(16);
+                    line-height: vw-tab(5);
+                }
+                .problem-log-line-container{
+                    /* width: vw(5);
+                    background-color: #54677E;
+                    //height: 100%;
+                    float: left;
+                    border-radius: 5px; */
+                    border-left: 3px solid #54677E;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    white-space: normal;
+                    .problem-card-detail-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-tab(10);
+                        line-height: vw-tab(3);
+                        color: #9A9A9A;
+                        margin: 0 0 0 0;
+                        padding: vw-tab(4) 0 0 vw-tab(7);
+                    }
+                    .problem-card-detail-label-mid{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-tab(10);
+                        line-height: vw-tab(3);
+                        color: #9A9A9A;
+                        margin: vw-tab(19.54) 0 0 0;
+                        padding: 0 0 0 vw-tab(7);
+                    }
+                    .problem-card-detail-text{
+                        font-family: 'SFUIText-Bold';
+                        width: 95%;
+                        font-size: vw-tab(11);
+                        line-height: vw-tab(4);
+                        margin: vw-tab(12) 0 0;
+                        color: #3C3B3B;
+                        padding: 0 0 0 vw-tab(7);
+                    }
+                    .problem-card-detail-input{
+                        //padding: vw-tab(10) 0 0 0;
+                        font-size: vw-tab(13);
+                        line-height: vw-tab(16);
+                        font-family: 'SFUIText-Bold';
+                    }
+                    .problem-card-detail-input-root{
+                        width: 90%;
+                        //margin-left: vw-tab(16);
+                    }
+                    .problem-edit-dropdown {
+                        position: relative;
+                        display: inline-block;
+                        background-color: #ffffff;
+                        width: 70%;
+                        height: vw-tab(38.07);
+                        margin: vw-tab(5) 0 0 vw-tab(7);
+                        border-radius: 0.5vw;
+                        box-shadow: 0px 0.2vw 0.6vw rgba(0, 0, 0, 0.161);
+                    }
+                    .problem-dropdown-button {
+                        position: relative;
+                        background-color: #ffffff;
+                        border-radius: 0.4vw;
+                        display: flex;
+                        align-items: center;
+                        height: vw-tab(38.07);
+                        .problem-dropdown-selected-item{
+                            margin: 0 0 0 1vw;
+                            display: flex;
+                            flex-direction: row;
+                            white-space: nowrap;
+                            height: 3vw;
+                            align-items: center;
+                            font-family: 'SFUIText-Regular';
+                            font-size: vw-tab(13);
+                            line-height: vw-tab(16);
+                            font-weight: 500;
+                            overflow: hidden;
+                            color: #3C3B3B;
+                            .problem-expand-icon-container{
+                                background-color: map-get($colors, primary);
+                                position: absolute;
+                                right: 0;
+                                height: 100%;
+                                width: 20%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-bottom-right-radius: 0.4vw;
+                                border-top-right-radius: 0.4vw;
+                                .problem-expand-icon{
+                                    font-size: vw-tab(25);
+                                }
+                            }
+                        }
+                    }
+                    
+                    .problem-list-items {
+                        list-style-type: none;
+                        margin: 2vw 0 0 0;
+                        padding: 1vw 0 1vw 0;
+                        top: 2.1vw;
+                        right: 0px;
+                        width: 100%;
+                        background-color: white;
+                        position: absolute;
+                        box-shadow: 0px 0.3vw 0.6vw 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(14);
+                        line-height: vw-tab(17);
+                        //font-weight: 500;
+                        color: #3C3B3B;
+                        max-height: vw-tab(230); 
+                        overflow: auto;
+                        li {
+                            padding: 1.5vw 1vw;
+                            color: #000;
+                        }
+                        li:hover {
+                            background-color: #e5e5e5;
+                            color: #000;
+                        }
+                    }
+                }
+                .problem-log-delay-container{
+                    border-left: 3px solid #54677E;
+                    display: flex;
+                    flex: 1;
+                    .start-container{
+                        flex: 1;
+                        margin: 0 0 0 vw-tab(7);
+                    }
+                    .end-container{
+                        flex: 1;
+                        margin: 0 0 0 vw-tab(7);
+                    }
+                    .delay-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-tab(10);
+                        //line-height: vw-tab(3);
+                        color: #9A9A9A;
+                        margin: 0 0 0 0;
+                        padding: vw-tab(4) 0 0 0;
+                    }
+                    .delay-text{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(11);
+                        //line-height: vw-tab(4);
+                        margin: 0 0 0 0;
+                        color: #3C3B3B;
+                        padding: vw-tab(12) 0 0 0;
+                    }
+                    .dt-input{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(9);
+                        line-height: vw-tab(17);
+                        outline: 0;
+                        border-width: 0 0 1px;
+                        border-color:black
+                    }
+                    .dt-input:hover, .dt-input:focus{
+                        border-width: 0 0 2px;
+                        border-color:black
+                    }
+                }
+            }
+            .bottom-row{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw-tab(20);
+                justify-content: flex-end;
+                .btn-approve{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-tab(100.99) !important;
+                    height: vw-tab(35.3) !important;
+                    font-size: vw-tab(13) !important;
+                    line-height: vw-tab(16) !important;
+                    font-family: 'SFUIText-Bold';
+                    background-color: map-get($colors , primary);
+                    text-transform: none;
+                    box-shadow: 0px vw-tab(2) vw-tab(4) rgba(0, 0, 0, 0.161);
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                    margin-right: vw-tab(15);
+                }
+                .btn-reject{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-tab(100.99) !important;
+                    height: vw-tab(34) !important;
+                    font-size: vw-tab(13) !important;
+                    line-height: vw-tab(16) !important;
+                    font-family: 'SFUIText-Bold';
+                    // background-color: map-get($colors , primary);
+                    text-transform: none;
+                    // box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                    border: 1px solid #000000;
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                }
+                .btn-cancel{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-tab(100.99) !important;
+                    height: vw-tab(35.3) !important;
+                    font-size: vw-tab(13) !important;
+                    line-height: vw-tab(16) !important;
+                    font-family: 'SFUIText-Bold';
+                    background-color: map-get($colors , danger);
+                    text-transform: none;
+                    color: map-get($colors , light);
+                    box-shadow: 0px vw-tab(2) vw-tab(4) rgba(0, 0, 0, 0.161);
+                    //border: 1px solid #000000;
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                }
+                .btn-loading{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: vw-tab(100.99) !important;
+                    height: vw-tab(35.3) !important;
+                    font-size: vw-tab(13) !important;
+                    line-height: vw-tab(16) !important;
+                    font-family: 'SFUIText-Bold';
+                    background-color: map-get($colors , primary);
+                    text-transform: none;
+                    box-shadow: 0px vw-tab(2) vw-tab(4) rgba(0, 0, 0, 0.161);
+                    border-radius: 0.4vw;
+                    cursor: progress;
+                    pointer-events:none;
+                    margin-right: vw-tab(15);
+                }
+                .btn-approve:hover {
+                    background-color: map-get($colors, primary-dark);
+                }
+                .btn-reject:hover {
+                    background-color: map-get($colors, gray);
+                }
+                .btn-cancel:hover {
+                    background-color: #c22f2f;
+                }
+            }
+        }
+    }
+
+    .problem-card-detail-remarks{
+        font-family: 'SFUIText-Bold';
+        width: 95%;
+        font-size: vw-tab(11);
+        //line-height: vw-tab(4);
+        margin: vw-tab(12) 0 0 0;
+        color: #3C3B3B;
+        padding: 0 0 0 vw-tab(7);
+    }
+}
+
+// MOBILE
+@media (max-width: 599px) {
+    .sub-app-bar{
+        position: fixed;
+        width: 100vw;
+        height: vw-mobile(30);
+        z-index: 999;
+        background: #ffffff;
+        margin-top: vw-mobile(70);
+        border-top: vw-mobile(1) solid rgba(0, 0, 0, 0.11);
+        padding-left: vw-mobile(45);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .link{
+            margin: 0;
+            color: #4DA1FF;
+            font-family: 'Lato-Bold';
+            font-size: vw-mobile(10);
+            line-height: vw-mobile(12);
+            height: fit-content;
+            text-decoration: none;
+            margin-right: 0.3vw;
+        }
+        .not-link{
+            margin: 0;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw-mobile(11);
+            line-height: vw-mobile(14);
+            height: fit-content;
+            margin-right: 0.3vw;
+        }
+        .arrow-right{
+            color: #4DA1FF;
+            font-size: vw-mobile(12);
+            height: fit-content;
+            margin-top: 0.1vw;
+            margin-right: 0.3vw;
+        }
+    }
+    
+    .problem-log-detail-page-content{
+        padding-left: vw-mobile(18);
+        padding-top: vw-mobile(110);
+        padding-right: vw-mobile(10);
+        height: 200vw;
+        .problem-log-detail{
+            flex: 1;
+            flex-direction: row;
+            display: flex;
+        }
+    }
+    
+    .save-modal{
+        width: vw-mobile(250);
+        height:vw-mobile(200);
+        background-color: white;
+        margin-top:vw-mobile(250);
+        margin-left:vw-mobile(50);
+        border-radius: 0.5vw;
+        display: flex;
+        flex-direction: column;
+        padding: 1vw 1.5vw 2vw 1.5vw;
+        .close-btn-row{
+            display: flex;
+            justify-content: flex-end;
+            .close-btn{
+                height: 4vw;
+                width: 4vw;
+                background-image: url('../../../../assets/images/close.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .close-btn:hover{
+                background-image: url('../../../../assets/images/close-hover.png');
+            }
+        }
+        .title-modal-row{
+            display: flex;
+            justify-content: center;
+            .title-modal-approval{
+                margin:0;
+                margin-bottom: vw-mobile(80);
+                font-size: vw-mobile(15);
+                font-family: 'SFUIDisplay-Bold';
+                color: #3C3B3B;
+            }
+        }
+        .image-modal-row{
+            display:flex;
+            justify-content: center;
+            padding: vw-mobile(16) 0 0;
+            .image-content{
+                height: vw-mobile(100.41);
+                width: vw-mobile(120.62);
+                background-image: url('../../../../assets/images/success.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .image-content-approve{
+                height: vw-mobile(100.41);
+                width: vw-mobile(120.62);
+                background-image: url('../../../../assets/images/approve.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .image-content-reject{
+                height: vw-mobile(100.41);
+                width: vw-mobile(120.62);
+                background-image: url('../../../../assets/images/reject.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+        .text-modal-row{
+            display:flex;
+            justify-content: center;
+            padding: vw-mobile(25) 0 vw-mobile(20);
+            .text-modal-content{
+                font-family: 'SFUIText-Regular';
+                font-size: vw-mobile(11);
+                line-height: vw-mobile(15);
+                text-align: center;
+                color: grey;
+            }
+        }
+        .button-modal-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0 0 vw-mobile(10) 0;
+            .btn-yes{
+                display: flex;
+                align-items: center;
+                margin-right:vw-mobile(10);
+                justify-content: center;
+                width: vw-mobile(100.99) !important;
+                height: vw-mobile(35.3) !important;
+                font-size: vw-mobile(13) !important;
+                line-height: vw-mobile(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , primary);
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: pointer;
+                margin-left: vw-mobile(15);
+            }
+            .btn-no{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: vw-mobile(100.99) !important;
+                height: vw-mobile(35.3) !important;
+                font-size: vw-mobile(13) !important;
+                line-height: vw-mobile(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: #F2F2F4;
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: pointer;
+            }
+            .btn-loading{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: vw-mobile(100.99) !important;
+                height: vw-mobile(35.3) !important;
+                font-size: vw-mobile(13) !important;
+                line-height: vw-mobile(16) !important;
+                font-family: 'SFUIText-Bold';
+                background-color: map-get($colors , primary);
+                text-transform: none;
+                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                border-radius: 0.4vw;
+                cursor: no-drop;
+                pointer-events:none;
+            }
+            .btn-yes:hover {
+                background-color: map-get($colors, primary-dark);
+            }
+            .btn-no:hover {
+                background-color: #e1e1e1;
+            }
+        }
+    }
+    
+    .problem-log-detail-card {
+        width: vw-mobile(500.92);
+        height: vw-mobile(600);
+        display: flex;
+        .problem-log-card-content{
+            max-width: 95%;
+            padding: vw-mobile(15) vw-mobile(15) 0 vw-mobile(15);
+            flex: 1;
+            .problem-log-card-title-row{
+                display: flex;
+                flex-direction: row;
+                border-bottom-style: dotted;
+                border-bottom-color: #54677E;
+                border-bottom-width: vw-mobile(2);
+                padding-bottom: vw-mobile(5);
+                .problem-log-card-title{
+                    margin: 0;
+                    flex: 1;
+                    display: flex;
+                    //justify-content: flex-start;
+                    align-items: center;
+                    font-size: vw-mobile(15);
+                    line-height: vw-mobile(5);
+                    font-family: 'SFUIText-Bold';
+                    margin: 0;
+                    //padding-bottom: vw-mobile(10);
+                }
+                .edit-container{
+                    margin: 0;
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .edit-icon{
+                        margin: 0;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(14);
+                        line-height: vw-mobile(10);
+                        //padding-bottom: vw-tab(5);
+                        color: #76D672;
+                        cursor: pointer;
+                    }
+                    .edit-icon:hover{
+                        color: #5ebe5a;
+                    }
+                }
+            }
+            .problem-log-content-container{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw(4.8);
+                .problem-card-detail-left{
+                    max-width: 50vw;
+                    flex: 1;
+                }
+                .problem-card-detail-right{
+                    max-width: 50vw;
+                    flex: 1;
+                }
+                .problem-card-detail-label-big{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-mobile(13);
+                    line-height: vw-mobile(14);
+                    padding-top: vw-mobile(5);
+                }
+                .problem-card-detail-label-big-30{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-mobile(13);
+                    line-height: vw-mobile(14);
+                }
+                .problem-log-line-container{
+                    /* width: vw(5);
+                    background-color: #54677E;
+                    //height: 100%;
+                    float: left;
+                    border-radius: 5px; */
+                    border-left: 3px solid #54677E;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    white-space: normal;
+                    .problem-card-detail-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-mobile(10);
+                        line-height: vw-mobile(5);
+                        color: #9A9A9A;
+                        margin: 0 0 0 0;
+                        padding: vw-mobile(5) 0 0 vw-mobile(7);
+                    }
+                    .problem-card-detail-label-mid{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-mobile(10);
+                        line-height: vw-mobile(5);
+                        color: #9A9A9A;
+                        margin: vw-mobile(18) 0 0 0;
+                        padding: 0 0 0 vw-mobile(7);
+                    }
+                    .problem-card-detail-text{
+                        font-family: 'SFUIText-Bold';
+                        width: 95%;
+                        font-size: vw-mobile(10);
+                        line-height: vw-mobile(15);
+                        margin: vw-mobile(10) 0 0;
+                        color: #3C3B3B;
+                        padding: 0 0 0 vw-mobile(7);
+                    }
+                    .problem-card-detail-input{
+                        //padding: vw-tab(10) 0 0 0;
+                        font-size: vw-mobile(10);
+                        line-height: vw-mobile(13);
+                        font-family: 'SFUIText-Bold';
+                    }
+                    .problem-card-detail-input-root{
+                        width: 90%;
+                        margin: vw-mobile(7) 0 0 vw-mobile(7);
+                    }
+                    .form-error-helper{
+                        margin-left: vw-mobile(7);
+                    }
+                    .problem-edit-dropdown {
+                        position: relative;
+                        display: inline-block;
+                        background-color: #ffffff;
+                        width: 90%;
+                        height: auto;
+                        margin: vw-mobile(5) 0 0 vw-mobile(7);
+                        border-radius: 0.5vw;
+                        box-shadow: 0px 0.2vw 0.6vw rgba(0, 0, 0, 0.161);
+                    }
+                    .problem-dropdown-button {
+                        position: relative;
+                        background-color: #ffffff;
+                        border-radius: 0.4vw;
+                        display: flex;
+                        align-items: center;
+                        height: vw-mobile(20.07);
+                        .problem-dropdown-selected-item{
+                            margin: 0 0 0 1vw;
+                            display: flex;
+                            flex-direction: row;
+                            white-space: nowrap;
+                            height: 3vw;
+                            align-items: center;
+                            font-family: 'SFUIText-Regular';
+                            font-size: vw-mobile(10);
+                            line-height: vw-mobile(13);
+                            font-weight: 500;
+                            overflow: hidden;
+                            color: #3C3B3B;
+                            .problem-expand-icon-container{
+                                background-color: map-get($colors, primary);
+                                position: absolute;
+                                right: 0;
+                                height: 100%;
+                                width: 20%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-bottom-right-radius: 0.4vw;
+                                border-top-right-radius: 0.4vw;
+                                .problem-expand-icon{
+                                    font-size: vw-mobile(25);
+                                }
+                            }
+                        }
+                    }
+                    
+                    .problem-list-items {
+                        list-style-type: none;
+                        margin: 2vw 0 0 0;
+                        padding: 1vw 0 1vw 0;
+                        top: 2.1vw;
+                        right: 0px;
+                        width: 100%;
+                        background-color: white;
+                        position: absolute;
+                        box-shadow: 0px 0.3vw 0.6vw 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(9);
+                        line-height: vw-mobile(12);
+                        //font-weight: 500;
+                        color: #3C3B3B;
+                        max-height: vw-mobile(200); 
+                        overflow: auto;
+                        li {
+                            padding: 1.5vw 2vw;
+                            color: #000;
+                        }
+                        li:hover {
+                            background-color: #e5e5e5;
+                            color: #000;
+                        }
+                    }
+                }
+                .problem-log-delay-container{
+                    border-left: 3px solid #54677E;
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    .start-container{
+                        flex: 1;
+                        margin: 0 0 0 vw-mobile(7);
+                    }
+                    .end-container{
+                        flex: 1;
+                        margin: vw-mobile(7) 0 0 vw-mobile(7);
+                    }
+                    .delay-label{
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw-mobile(10);
+                        line-height: vw-mobile(5);
+                        margin: vw-mobile(10) 0 0;
+                        color: #9A9A9A;
+                        margin: 0 0 0 0;
+                        padding: vw-mobile(4) 0 0 0;
+                    }
+                    .delay-text{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(10);
+                        line-height: vw-mobile(5);
+                        margin: vw-mobile(10) 0 0;
+                        margin: 0 0 0 0;
+                        color: #3C3B3B;
+                        padding: vw-mobile(12) 0 0 0;
+                    }
+                    .dt-input{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(9);
+                        line-height: vw-mobile(17);
+                        outline: 0;
+                        border-width: 0 0 1px;
+                        border-color:black
+                    }
+                    .dt-input-error{
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(9);
+                        line-height: vw-mobile(17);
+                        outline: 0;
+                        border-width: 0 0 2px;
+                        border-color:#f44336
+                    }
+                    .dt-input:hover, .dt-input:focus{
+                        border-width: 0 0 2px;
+                        border-color:black
+                    }
+                }
+            }
+            .bottom-row{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw-mobile(30);
+                justify-content: center;
+                .btn-approve{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-mobile(100.99) !important;
+                    height: vw-mobile(35.3) !important;
+                    font-size: vw-mobile(14) !important;
+                    line-height: vw-mobile(10) !important;
+                    font-family: 'SFUIText-Bold';
+                    background-color: map-get($colors , primary);
+                    text-transform: none;
+                    box-shadow: 0px vw-mobile(2) vw-mobile(4) rgba(0, 0, 0, 0.161);
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                    margin-right: vw-mobile(15);
+                }
+                .btn-reject{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-mobile(100.99) !important;
+                    height: vw-mobile(34) !important;
+                    font-size: vw-mobile(14) !important;
+                    line-height: vw-mobile(10) !important;
+                    font-family: 'SFUIText-Bold';
+                    // background-color: map-get($colors , primary);
+                    text-transform: none;
+                    // box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                    border: 1px solid #000000;
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                }
+                .btn-cancel{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-mobile(100.99) !important;
+                    height: vw-mobile(34) !important;
+                    font-size: vw-mobile(14) !important;
+                    line-height: vw-mobile(10) !important;
+                    font-family: 'SFUIText-Bold';
+                    background-color: map-get($colors , danger);
+                    text-transform: none;
+                    color: map-get($colors , light);
+                    box-shadow: 0px vw-mobile(2) vw-mobile(4) rgba(0, 0, 0, 0.161);
+                    //border: 1px solid #000000;
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                }
+                .btn-loading{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: vw-mobile(100.99) !important;
+                    height: vw-mobile(34) !important;
+                    font-size: vw-mobile(14) !important;
+                    line-height: vw-mobile(10) !important;
+                    font-family: 'SFUIText-Bold';
+                    background-color: map-get($colors , primary);
+                    text-transform: none;
+                    box-shadow: 0px vw-mobile(2) vw-mobile(4) rgba(0, 0, 0, 0.161);
+                    border-radius: 0.4vw;
+                    cursor: progress;
+                    pointer-events:none;
+                    margin-right: vw-mobile(15);
+                }
+                .btn-approve:hover {
+                    background-color: map-get($colors, primary-dark);
+                }
+                .btn-reject:hover {
+                    background-color: map-get($colors, gray);
+                }
+                .btn-cancel:hover {
+                    background-color: #c22f2f;
+                }
+            }
+        }
+    }
+
+    .problem-card-detail-remarks{
+        font-family: 'SFUIText-Bold';
+        width: 90%;
+        font-size: vw-mobile(10);
+        line-height: vw-mobile(10);
+        margin: vw-mobile(10) 0 0;
+        color: #3C3B3B;
+        padding: 0 0 0 vw-mobile(7);
+    }
+}

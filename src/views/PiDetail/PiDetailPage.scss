@@ -1,0 +1,209 @@
+@import '../../themes/colors';
+@import '../../themes/fonts';
+@import '../../themes/size';
+
+.sub-app-bars{
+    position: fixed;
+    width: 100vw;
+    height: vw(27);
+    z-index: 999;
+    background: #ffffff;
+    margin-top: vw(88);
+    border-top: vw(1) solid rgba(0, 0, 0, 0.11);
+    padding-left: vw(297);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .link{
+        margin: 0;
+        color: #4DA1FF;
+        font-family: 'Lato-Bold';
+        font-size: vw(14);
+        line-height: vw(17);
+        height: fit-content;
+        text-decoration: none;
+        margin-right: vw(8);
+    }
+    .not-link{
+        margin: 0;
+        font-family: 'Lato-Bold';
+        color: #3C3B3B;
+        font-size: vw(14);
+        line-height: vw(17);
+        height: fit-content;
+        margin-right: vw(8);
+    }
+    .arrow-right{
+        color: #4DA1FF;
+        font-size: vw(14);
+        height: fit-content;
+        margin-top: vw(3);
+        margin-right: vw(8);
+    }
+}
+
+.modal-container{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    .modal-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.detail-page-content{
+    padding-left: vw(297);
+    padding-top: vw(145);
+    padding-right: vw(70);
+    height: 100vh;
+    .job-identity{
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+    }
+}
+@media (min-width: 600px) and (max-width: 1025px) {
+    .sub-app-bar{
+        position: fixed;
+        width: 100vw;
+        height: vw-tab(34);
+        margin-top: vw-tab(88);
+        background: #ECECEC;
+        padding-left: vw-tab(30);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .link{
+            margin: 0;
+            color: #4DA1FF;
+            font-family: 'Lato-Bold';
+            font-size: vw-tab(14);
+            line-height: vw-tab(17);
+            height: fit-content;
+            text-decoration: none;
+            margin-right: vw-tab(8);
+        }
+        .not-link{
+            margin: 0;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw-tab(14);
+            line-height: vw-tab(17);
+            height: fit-content;
+            margin-right: vw-tab(8);
+        }
+        .arrow-right{
+            color: #4DA1FF;
+            font-size: vw-tab(14);
+            height: fit-content;
+            margin-top: vw-tab(3);
+            margin-right: vw-tab(8);
+        }
+    }    
+    .job-identity-container{
+        width: 100%;
+        padding-top: vw-tab(120);
+        height: vw-tab(253);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-x: scroll;        
+        .job-identity{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-left: vw-tab(30);
+            margin-top: vw-tab(35);
+            width: max-content;
+        }        
+    }
+    .job-identity-container::-webkit-scrollbar { 
+        display: none;
+    }
+    .detail-page-content{
+        padding: 0 vw-tab(30);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .line{
+            background-color: rgba(154, 154, 154, 0.41);
+            height: vw-tab(1);
+            margin: 0;
+            margin-bottom: 0;
+            width: 100%;
+        }
+        .detail{
+            overflow: hidden;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 599px) {
+    .sub-app-bar{
+        position: fixed;
+        width: 100vw;
+        height: vw-mobile(34);
+        margin-top: vw-mobile(73);
+        background: #ECECEC;
+        padding-left: vw-mobile(20);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .link{
+            margin: 0;
+            color: #4DA1FF;
+            font-family: 'Lato-Bold';
+            font-size: vw-mobile(12);
+            line-height: vw-mobile(12);
+            height: fit-content;
+            text-decoration: none;
+            margin-right: vw-mobile(3);
+        }
+        .not-link{
+            margin: 0;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw-mobile(12);
+            line-height: vw-mobile(12);
+            height: fit-content;
+            margin-right: vw-mobile(3);
+        }
+        .arrow-right{
+            color: #4DA1FF;
+            font-size: vw-mobile(12);
+            height: fit-content;
+            margin-top: vw-mobile(3);
+            margin-right: vw-mobile(3);
+        }
+    }    
+    .modal-container{
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        .modal-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+    }    
+    .detail-page-content{
+        padding-left: vw-mobile(20);
+        padding-top: vw-mobile(120);
+        padding-right: vw-mobile(20);
+        padding-bottom: vw-mobile(20);
+        height: fit-content;
+        .job-identity{
+            width: 100%;
+            height: fit-content;
+            flex-direction: column;
+            display: flex;
+        }
+    }
+}

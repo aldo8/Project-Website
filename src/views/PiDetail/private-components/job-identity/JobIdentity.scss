@@ -1,0 +1,223 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.job-card{
+    width: vw(530);
+    height: vw(240);
+    margin-left: vw(40);
+    display: flex;
+    .color-line{
+        width: vw(8);
+        background-color: map-get($colors, primary);
+    }
+    .job-card-content{
+        padding: vw(21) vw(20) 0 vw(27.15);
+        width: 100%;
+        .job-card-title-row{
+            display: flex;
+            flex-direction: row;
+            .job-card-title{
+                font-size: vw(21);
+                line-height: vw(25);
+                letter-spacing: 0.03em;
+                font-family: 'Lato-Black';
+                color: map-get($colors, primary);
+                margin: 0;
+            }
+            .job-card-badge-container{
+                margin: 0;
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .job-card-badge{
+                    margin: 0;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(15);
+                    line-height: vw(18);
+                    background-color: map-get($colors, primary);
+                    padding: vw(7) vw(21.5) vw(7) vw(21.5);
+                    border-radius: 1vw;
+                }
+            }
+        }
+        .job-card-detail-container{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: vw(4.8);
+            .job-card-detail-left{
+                flex: 0.8;                
+            }
+            .job-card-detail-right{
+                flex: 1;
+            }
+            .job-card-detail-label{
+                font-family: 'SFUIText-Regular';
+                font-size: vw(10);
+                line-height: vw(12);
+                color: #9A9A9A;
+                margin: vw(14.2) 0 0 0;
+            }
+            .job-card-detail-text{
+                font-family: 'SFUIText-Bold';
+                height: vw(17);
+                font-size: vw(14);
+                line-height: vw(17);
+                height: vw(17);
+                margin: vw(3.68) 0 0 0;
+                color: #3C3B3B;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 97%;
+            }
+            .job-card-detail-input{
+                padding: 0 0 vw(6) 0;
+                font-size: vw(14);
+                line-height: vw(17);
+                font-family: 'SFUIText-Bold';
+            }
+            .job-card-detail-input-root{
+                width: 100%;
+                margin-top: vw(4);
+                padding: 0;
+                position: relative;
+            }
+            .job-card-detail-input::before{
+                height: 0vw;
+            }
+            .fixed-job-card-detail-input{
+                margin-top: -vw(10);
+                height: vw(28);
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .job-card{
+        width: vw-tab(485.22);
+        height: vw-tab(214.07);
+        margin-left: vw-tab(20);
+        margin-right: vw-tab(10);
+        .color-line{
+            width: vw-tab(8);
+            background-color: map-get($colors, primary);
+        }
+        .job-card-content{
+            padding: vw-tab(21) vw-tab(24) 0 vw-tab(27.15);
+            .job-card-title-row{
+                display: flex;
+                flex-direction: row;
+                .job-card-title{
+                    font-size: vw-tab(21);
+                    line-height: vw-tab(25);
+                    letter-spacing: 0.03em;
+                    font-family: 'Lato-Black';
+                    color: map-get($colors, primary);
+                    margin: 0;
+                }
+            }
+            .job-card-detail-container{
+                padding: 0;
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw-tab(4.8);
+                .job-card-detail-left{
+                    flex: 1;         
+                }
+                .job-card-detail-right{
+                    flex: 1;
+                }
+                .job-card-detail-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw-tab(10);
+                    line-height: vw-tab(12);
+                    color: #9A9A9A;
+                    margin: vw-tab(14.2) 0 0 0;
+                }
+                .job-card-detail-text{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-tab(14);
+                    line-height: vw-tab(17);
+                    margin: vw-tab(3.68) 0 0 0;
+                    height: vw-tab(17);
+                    color: #3C3B3B;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 97%;
+                }
+                .job-card-detail-input{
+                    padding: 0 0 vw-tab(8) 0;
+                    font-size: vw-tab(14);
+                    line-height: vw-tab(17);
+                    font-family: 'SFUIText-Bold';
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .job-card{
+        width: 100%;
+        height: vw-mobile(190);
+        margin: 0;
+        margin-top: vw-mobile(15);
+        .color-line{
+            width: vw-mobile(8);
+            background-color: map-get($colors, primary);
+        }
+        .job-card-content{
+            padding: vw-mobile(21) vw-mobile(15) 0 vw-mobile(15);
+            .job-card-title-row{
+                display: flex;
+                flex-direction: row;
+                .job-card-title{
+                    font-size: vw-mobile(18);
+                    line-height: vw-mobile(21);
+                    letter-spacing: 0.03em;
+                    font-family: 'Lato-Black';
+                    color: map-get($colors, primary);
+                    margin: 0;
+                }
+            }
+            .job-card-detail-container{
+                padding: 0;
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                margin-top: vw-mobile(4.8);
+                .job-card-detail-left{
+                    flex: 1;         
+                }
+                .job-card-detail-right{
+                    flex: 1;
+                }
+                .job-card-detail-label{
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw-mobile(8);
+                    line-height: vw-mobile(9);
+                    color: #9A9A9A;
+                    margin: vw-mobile(14.2) 0 0 0;
+                }
+                .job-card-detail-text{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-mobile(12);
+                    line-height: vw-mobile(14);
+                    margin: vw-mobile(3.68) 0 0 0;
+                    height: vw-mobile(14);
+                    color: #3C3B3B;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

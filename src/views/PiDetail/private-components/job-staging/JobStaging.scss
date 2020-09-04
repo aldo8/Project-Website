@@ -1,0 +1,385 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.staging-container{
+    margin-top: vw(40.03);
+    .staging-expand{
+        width: vw(1553);
+        border-radius: vw(10) !important;
+        box-shadow: none;
+        .staging-header{
+            margin: 0;
+        }
+        .staging-header-expanded{
+            border-top-left-radius: vw(10) !important;
+            border-top-right-radius: vw(10) !important;
+            background-color: map-get($colors, primary);
+            margin: 0 !important;
+            height: vw(36) !important;
+            min-height: vw(36) !important;
+            display: flex !important;
+            align-items: center !important;
+            padding-left: vw(17);
+            padding-right: vw(20);
+            .staging-title{
+                font-family: 'SFUIDisplay-Bold';
+                font-size: vw(19);
+                line-height: vw(23);
+            }
+            .expand-icon{
+                font-size: vw(30);
+            }
+        }
+        .staging-header-icon{
+            font-weight: bold;
+            color: #3C3B3B;
+        }
+        .staging-detail{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            flex: 1;
+            height: vw(135) !important;
+            .staging-detail-container{                
+                .staging-group{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: vw(28) 0 vw(25) 0;
+                    margin-left: vw(148);
+                    width: vw(210);
+                    height: vw(70) !important;
+                    justify-content: flex-start;
+                    white-space: nowrap;
+                    .staging-icon{
+                        height: vw(35.5);
+                    }
+                    .staging-group-title{
+                        margin: vw(9) 0 0 0;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw(12);
+                        line-height: vw(14);
+                        color: #3C3B3B;
+                    }
+                    .staging-group-timestamp{
+                        margin: vw(4) 0 0 0;
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw(10);
+                        line-height: vw(12);
+                        color: #3C3B3B;
+                        opacity: 0.7;
+                    }
+                    .staging-group-detail{
+                        margin: vw(4) 0 0 0;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw(10);
+                        line-height: vw(12);
+                        color: map-get($colors, primary);
+                        text-decoration: none;
+                    }
+                    .staging-group-title-grey{
+                        margin: vw(9) 0 0 0;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw(12);
+                        line-height: vw(14);
+                        color: #F4F6F8;
+                    }
+                    .staging-progress{
+                        margin: vw(-15) 0 vw(5) 0 ;
+                        font-family: 'SFUIText-Regular';
+                        font-size: vw(10);
+                        line-height: vw(12);
+                        color: #C5D0EA;
+                    }
+                }
+                .staging-group:first-child{
+                    margin-left: vw(35);
+                }
+                .staging-line1{
+                    position: absolute;
+                    top: vw(85);
+                    left: vw(165);
+                    height: vw(2);
+                    width: vw(186);
+                }
+                .staging-line2{
+                    position: absolute;
+                    top: vw(85);
+                    left: vw(415);
+                    height: vw(2);
+                    width: vw(186);
+                }
+                .staging-line3{
+                    position: absolute;
+                    top: vw(85);
+                    left: vw(655);
+                    height: vw(2);
+                    width: vw(186);
+                }
+                .staging-line4{
+                    position: absolute;
+                    top: vw(85);
+                    left: vw(900);
+                    height: vw(2);
+                    width: vw(186);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .staging-container{
+        margin-top: vw-tab(12);
+        .staging-expand{
+            width: 100%;
+            border-radius: vw-tab(5) !important;
+            box-shadow: none;
+            .staging-header{
+                margin: 0;
+            }
+            .staging-header-expanded{
+                border-top-left-radius: vw-tab(5) !important;
+                border-top-right-radius: vw-tab(5) !important;
+                background-color: map-get($colors, primary);
+                margin: 0 !important;
+                height: vw-tab(32) !important;
+                min-height: vw-tab(32) !important;
+                display: flex !important;
+                align-items: center !important;
+                padding-left: vw-tab(15);
+                padding-right: vw-tab(15);
+                .staging-title{
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw-tab(16);
+                    line-height: vw-tab(19);
+                }
+                .expand-icon{
+                    font-size: vw-tab(30);
+                }
+            }
+            .staging-header-icon{
+                font-weight: bold;
+                color: black;
+            }
+            .staging-detail{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                flex: 1;
+                height: vw-tab(163) !important;
+                .staging-detail-container{
+                    .staging-group{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: vw-tab(25) 0 vw-tab(25) 0;
+                        margin-left: vw-tab(7);
+                        width: vw-tab(130) !important;
+                        height: vw-tab(113) !important;
+                        justify-content: flex-start;
+                        .staging-icon{
+                            height: vw-tab(52);
+                        }
+                        .staging-group-title{
+                            margin: vw-tab(10) 0 0 0;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(14);
+                            line-height: vw-tab(17);
+                            color: #3C3B3B;
+                        }
+                        .staging-timestamp {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .staging-group-timestamp{
+                                margin: vw-tab(4) 0 0 0;
+                                font-family: 'SFUIText-Bold';
+                                font-size: vw-tab(11);
+                                line-height: vw-tab(13);
+                                color: #3C3B3B;
+                                opacity: 0.7;
+                            }
+                        }
+                        .staging-group-detail{
+                            margin: vw-tab(4) 0 0 0;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(11);
+                            line-height: vw-tab(13);
+                            color: map-get($colors, primary);
+                            text-decoration: none;
+                        }
+                        .staging-group-title-grey{
+                            margin: vw-tab(9) 0 0 0;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(14);
+                            line-height: vw-tab(17);
+                            color: #F4F6F8;
+                        }
+                        .staging-progress{
+                            margin: vw-tab(-17) 0 vw-tab(5) 0 ;
+                            font-family: 'SFUIText-Regular';
+                            font-size: vw-tab(11);
+                            line-height: vw-tab(13);
+                            color: #C5D0EA;
+                        }
+                    }
+                }
+                .staging-group:first-child{
+                    margin-left: vw-tab(15);
+                }
+                .staging-line1{
+                    position: absolute;
+                    top: vw-tab(85);
+                    left: vw-tab(112);
+                    height: vw-tab(2);
+                    width: vw-tab(68);
+                }
+                .staging-line2{
+                    position: absolute;
+                    top: vw-tab(85);
+                    left: vw-tab(250);
+                    height: vw-tab(2);
+                    width: vw-tab(68);
+                }
+                .staging-line3{
+                    position: absolute;
+                    top: vw-tab(85);
+                    left: vw-tab(388);
+                    height: vw-tab(2);
+                    width: vw-tab(68);
+                }
+                .staging-line4{
+                    position: absolute;
+                    top: vw-tab(85);
+                    left: vw-tab(526);
+                    height: vw-tab(2);
+                    width: vw-tab(68);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .staging-container{
+        margin-top: vw-mobile(15);
+        .staging-expand{
+            width: 100%;
+            border-radius: vw-mobile(5) !important;
+            box-shadow: none;
+            .staging-header{
+                margin: 0;
+            }
+            .staging-header-expanded{
+                border-top-left-radius: vw-mobile(5) !important;
+                border-top-right-radius: vw-mobile(5) !important;
+                background-color: map-get($colors, primary);
+                margin: 0 !important;
+                height: vw-mobile(32) !important;
+                min-height: vw-mobile(32) !important;
+                display: flex !important;
+                align-items: center !important;
+                padding-left: vw-mobile(10);
+                padding-right: vw-mobile(10);
+                .staging-title{
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw-mobile(16);
+                    line-height: vw-mobile(19);
+                }
+                .expand-icon{
+                    font-size: vw-mobile(27);
+                }
+            }
+            .staging-header-icon{
+                font-weight: bold;
+                color: black;
+            }
+            .staging-detail{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                flex: 1;
+                height: vw-mobile(120) !important;
+                width: 95%;
+                justify-content: space-between;
+                .staging-detail-container{
+                    .staging-group{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: vw-mobile(70) !important;
+                        height: vw-mobile(75) !important;
+                        justify-content: flex-start;
+                        .staging-icon{
+                            height: vw-mobile(30);
+                        }
+                        .staging-group-title{
+                            margin: vw-mobile(10) 0 0 0;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-mobile(8);
+                            line-height: vw-mobile(10);
+                            text-align: center;
+                            color: #3C3B3B;
+                        }
+                        .staging-timestamp {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .staging-group-timestamp{
+                                margin: vw-mobile(4) 0 0 0;
+                                font-family: 'SFUIText-Bold';
+                                font-size: vw-mobile(7);
+                                line-height: vw-mobile(8);
+                                color: #3C3B3B;
+                                opacity: 0.7;
+                            }
+                        }
+                        .staging-group-detail{
+                            margin: vw-mobile(4) 0 0 0;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-mobile(7);
+                            line-height: vw-mobile(8);
+                            color: map-get($colors, primary);
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .staging-line1{
+                    position: absolute;
+                    top: vw-mobile(85);
+                    left: vw-mobile(112);
+                    height: vw-mobile(2);
+                    width: vw-mobile(68);
+                }
+                .staging-line2{
+                    position: absolute;
+                    top: vw-mobile(85);
+                    left: vw-mobile(250);
+                    height: vw-mobile(2);
+                    width: vw-mobile(68);
+                }
+                .staging-line3{
+                    position: absolute;
+                    top: vw-tab(85);
+                    left: vw-tab(388);
+                    height: vw-tab(2);
+                    width: vw-tab(68);
+                }
+                .staging-line4{
+                    position: absolute;
+                    top: vw-mobile(85);
+                    left: vw-mobile(526);
+                    height: vw-mobile(2);
+                    width: vw-mobile(68);
+                }
+            }
+        }
+    }
+}

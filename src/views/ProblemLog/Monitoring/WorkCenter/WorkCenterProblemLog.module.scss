@@ -1,0 +1,20 @@
+.workcenter-container{
+    padding-right:10px;
+    padding-bottom:10px;
+    max-width:32.5% !important;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+.workcenter-container{
+    padding-right:10px;
+    padding-bottom:10px;
+    max-width:50% !important;
+    }
+}
+@media(max-width:599px){
+.workcenter-container{
+    padding-right:10px;
+    padding-bottom:10px;
+    max-width:100% !important;
+    }
+}

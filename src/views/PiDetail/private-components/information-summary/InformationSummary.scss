@@ -1,0 +1,399 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.summary-info-container{
+    margin-top: vw(35);
+    margin-bottom: vw(35);
+    .summary-info-expand{
+        width: vw(1553);
+        border-radius: vw(10) !important;
+        box-shadow: none;
+        .summary-info-header{
+            margin: 0;
+        }
+        .summary-info-header-expanded{
+            border-top-left-radius: vw(10) !important;
+            border-top-right-radius: vw(10) !important;
+            background-color: map-get($colors, primary);
+            margin: 0 !important;
+            height: vw(36) !important;
+            min-height: vw(36) !important;
+            display: flex !important;
+            align-items: center !important;
+            padding-left: vw(17);
+            padding-right: vw(20);
+            .summary-info-title{
+                font-family: 'SFUIDisplay-Bold';
+                font-size: vw(19);
+                line-height: vw(23);
+            }
+            .expand-icon{
+                font-size: vw(30);
+            }   
+        }
+        .summary-info-header-icon{
+            font-weight: bold;
+            color: #3C3B3B;
+        }
+        .summary-info-expanded{
+            display: flex;
+            flex-direction: column;
+            padding: vw(30) vw(33);
+            .summary-info-detail{
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                .summary-info-item-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: vw(400);
+                    margin-right: vw(50);
+                    .summary-info-item-title{
+                        margin: 0;
+                        font-family: 'Lato-Black';
+                        font-size: vw(15);
+                        line-height: vw(18);
+                    }
+                    .summary-info-item{
+                        display: flex;
+                        flex-direction: row;
+                        .summary-info-item-icon-container{
+                            border-radius: vw(10);
+                            margin-top: vw(18);
+                            box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.15);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: vw(70);
+                            height: vw(75);
+                            cursor: pointer;
+                            .summary-info-item-icon{
+                                width: vw(35);
+                                height: vw(35);
+                            }
+                            .summary-info-item-icon-checked{
+                                width: vw(26);
+                                position: absolute;
+                                top: vw(95);
+                                left: vw(85);
+                            }
+                            .summary-info-item-icon-checked2{
+                                width: vw(26);
+                                position: absolute;
+                                top: vw(95);
+                                left: vw(540);
+                            }
+                            .summary-info-item-icon-checked3{
+                                width: vw(26);
+                                position: absolute;
+                                top: vw(95);
+                                left: vw(885);
+                            }
+                            .summary-info-item-icon-checked4{
+                                width: vw(26);
+                                position: absolute;
+                                top: vw(95);
+                                left: vw(1230);
+                            }
+                        }
+                        .summary-info-item-detail-container{
+                            font-family: 'Lato-Bold';
+                            font-size: vw(14);
+                            line-height: vw(17);
+                            p{
+                                margin: vw(12) 0 0 vw(29);
+                            }
+                            p:first-child{
+                                margin: vw(18) 0 0 vw(29);
+                            }
+                            .green{
+                                font-family: 'Lato-Black';
+                                color: #76D672;
+                                opacity: 0.8;
+                            }
+                            .yellow{
+                                font-family: 'Lato-Black';
+                                color: map-get($colors, yellow);
+                                opacity: 0.8;
+                            }
+                            .red{
+                                font-family: 'Lato-Black';
+                                color: #FF5656;
+                                opacity: 0.8;
+                            }
+                            .grey{
+                                font-family: 'Lato-Black';
+                                color: #CACACA;
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .summary-info-container{
+        margin-top: vw-tab(20);
+        margin-bottom: vw-tab(30);
+        .summary-info-expand{
+            width: 100%;
+            border-radius: vw-tab(5) !important;
+            box-shadow: none;
+            .summary-info-header{
+                margin: 0;
+            }
+            .summary-info-header-expanded{
+                border-top-left-radius: vw-tab(5) !important;
+                border-top-right-radius: vw-tab(5) !important;
+                background-color: map-get($colors, primary);
+                margin: 0 !important;
+                height: vw-tab(32) !important;
+                min-height: vw-tab(32) !important;
+                display: flex !important;
+                align-items: center !important;
+                padding-left: vw-tab(15);
+                padding-right: vw-tab(15);
+                .summary-info-title{
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw-tab(16);
+                    line-height: vw-tab(19);
+                }  
+                .expand-icon{
+                    font-size: vw-tab(30);
+                }          
+            }
+            .summary-info-header-icon{
+                font-weight: bold;
+                color: #3C3B3B;
+            }
+            .summary-info-expanded{
+                display: flex;
+                flex-direction: column;
+                padding: vw-tab(30) 0 vw-tab(30) vw-tab(30);
+                .summary-info-detail{
+                    display: flex;
+                    flex-direction: row;
+                    flex: 1;
+                    .summary-info-item-container{
+                        display: flex;
+                        flex-direction: column;
+                        width: vw-tab(195);
+                        margin-right: vw-tab(30);
+                        .summary-info-item-title{
+                            margin: 0;
+                            font-family: 'Lato-Black';
+                            font-size: vw-tab(15);
+                            line-height: vw-tab(18);
+                        }
+                        .summary-info-item{
+                            display: flex;
+                            flex-direction: column;
+                            .summary-info-item-icon-container{
+                                border-radius: vw-tab(10);
+                                margin-top: vw-tab(18);
+                                box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.15);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: vw-tab(70);
+                                height: vw-tab(75);
+                                cursor: pointer;
+                                .summary-info-item-icon{
+                                    width: vw-tab(35);
+                                    height: vw-tab(35);
+                                }
+                                .summary-info-item-icon-checked{
+                                    width: vw-tab(26);
+                                    position: absolute;
+                                    top: vw-tab(95);
+                                    left: vw-tab(85);
+                                }
+                                .summary-info-item-icon-checked2{
+                                    width: vw-tab(26);
+                                    position: absolute;
+                                    top: vw-tab(95);
+                                    left: vw-tab(255);
+                                }
+                                .summary-info-item-icon-checked3{
+                                    width: vw-tab(26);
+                                    position: absolute;
+                                    top: vw-tab(95);
+                                    left: vw-tab(420);
+                                }
+                                .summary-info-item-icon-checked4{
+                                    width: vw-tab(26);
+                                    position: absolute;
+                                    top: vw-tab(95);
+                                    left: vw-tab(590);
+                                }
+                            }
+                            .summary-info-item-detail-container{
+                                font-family: 'Lato-Bold';
+                                font-size: vw-tab(14);
+                                line-height: vw-tab(17);
+                                p{
+                                    margin: vw-tab(12) 0 0 0;
+                                }
+                                p:first-child{
+                                    margin: vw-tab(20) 0 0 0;
+                                }
+                                .green{
+                                    font-family: 'Lato-Black';
+                                    color: #76D672;
+                                    opacity: 0.8;
+                                }
+                                .yellow{
+                                    font-family: 'Lato-Black';
+                                    color: map-get($colors, yellow);
+                                    opacity: 0.8;
+                                }
+                                .red{
+                                    font-family: 'Lato-Black';
+                                    color: #FF5656;
+                                    opacity: 0.8;
+                                }
+                                .grey{
+                                    font-family: 'Lato-Black';
+                                    color: #CACACA;
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+        }
+    }    
+}
+
+@media (max-width: 599px) {
+    .summary-info-container{
+        margin-top: vw-mobile(15);
+        margin-bottom: vw-mobile(30);
+        .summary-info-expand{
+            width: 100%;
+            border-radius: vw-mobile(5) !important;
+            box-shadow: none;
+            .summary-info-header{
+                margin: 0;
+            }
+            .summary-info-header-expanded{
+                border-top-left-radius: vw-mobile(5) !important;
+                border-top-right-radius: vw-mobile(5) !important;
+                background-color: map-get($colors, primary);
+                margin: 0 !important;
+                height: vw-mobile(32) !important;
+                min-height: vw-mobile(32) !important;
+                display: flex !important;
+                align-items: center !important;
+                padding-left: vw-mobile(10);
+                padding-right: vw-mobile(10);
+                .summary-info-title{
+                    font-family: 'SFUIDisplay-Bold';
+                    font-size: vw-mobile(16);
+                    line-height: vw-mobile(19);
+                }  
+                .expand-icon{
+                    font-size: vw-mobile(27);
+                }          
+            }
+            .summary-info-header-icon{
+                font-weight: bold;
+                color: #3C3B3B;
+            }
+            .summary-info-expanded{
+                display: flex;
+                flex-direction: column;
+                padding: 0 vw-mobile(15) vw-mobile(15) vw-mobile(15);
+                .summary-info-detail{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    justify-content: space-between;
+                    .summary-info-item-container{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        overflow: hidden;
+                        padding-left: vw-mobile(5);
+                        .summary-info-item-title{
+                            margin: 0;
+                            font-family: 'Lato-Black';
+                            margin-top: vw-mobile(20);
+                            font-size: vw-mobile(12);
+                            line-height: vw-mobile(10);
+                            white-space: nowrap;
+                        }
+                        .summary-info-item{
+                            display: flex;
+                            margin-top: vw-mobile(5);
+                            height: vw-mobile(75);
+                            flex-direction: row;
+                            .summary-info-item-icon-container{
+                                border-radius: vw-mobile(10);
+                                box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.15);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: vw-mobile(70);
+                                height: vw-mobile(70);
+                                cursor: pointer;
+                                .summary-info-item-icon{
+                                    width: vw-mobile(35);
+                                    height: vw-mobile(35);
+                                }
+                                .summary-info-item-icon-checked{
+                                    display: none;
+                                }
+                                .summary-info-item-icon-checked2{
+                                    display: none;
+                                }
+                                .summary-info-item-icon-checked3{
+                                    display: none;
+                                }
+                            }
+                            .summary-info-item-detail-container{
+                                font-family: 'Lato-Bold';
+                                font-size: vw-mobile(11);
+                                line-height: vw-mobile(12);
+                                margin-left: vw-mobile(15);
+                                p{
+                                    margin: vw-mobile(5) 0 0 0;
+                                }
+                                p:first-child{
+                                    margin: vw-mobile(5) 0 0 0;
+                                }
+                                .green{
+                                    font-family: 'Lato-Black';
+                                    color: #76D672;
+                                    opacity: 0.8;
+                                }
+                                .yellow{
+                                    font-family: 'Lato-Black';
+                                    color: map-get($colors, yellow);
+                                    opacity: 0.8;
+                                }
+                                .red{
+                                    font-family: 'Lato-Black';
+                                    color: #FF5656;
+                                    opacity: 0.8;
+                                }
+                                .grey{
+                                    font-family: 'Lato-Black';
+                                    color: #CACACA;
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+        }
+    }    
+}

@@ -1,0 +1,61 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+@media (max-width: 599px) {
+    .job-list-mobile-card{
+        width: 100%;
+        display: flex;
+        box-shadow: 0px vw-mobile(4) vw-mobile(10) rgba(0, 0, 0, 0.161);
+        border-radius: vw-mobile(5);
+        height: vw-mobile(213);
+        margin-bottom: vw-mobile(20);
+        .job-list-mobile-content{
+            width: 100%;
+            height: 100%;
+            padding: vw-mobile(15) vw-mobile(23);
+            position: relative;
+            .check-box-mobile{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .yellow-line{
+                width: 100%;
+                height: vw-mobile(2);
+                margin-bottom: vw-mobile(12); 
+                background-color: #FFD500;
+            }
+            .job-list-label{
+                font-family: 'Lato-Regular';
+                line-height: vw-mobile(12);
+                font-size: vw-mobile(10);
+                color: #9A9A9A;
+                white-space: nowrap;
+            }
+            .job-list-detail{
+                font-family: 'Lato-Medium';
+                width: vw-mobile(100);
+                font-size: vw-mobile(12);
+                line-height: vw-mobile(14);
+                color: black;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .job-list-row{
+                height: vw-mobile(32);
+                display: flex;
+                flex-direction: row;
+                margin-bottom: vw-mobile(12);
+                .job-list-detail-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;   
+                    flex: 1;
+                }
+            }            
+        }
+    }
+}

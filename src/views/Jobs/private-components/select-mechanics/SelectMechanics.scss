@@ -1,0 +1,442 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.assign-mechanic-modal{
+    width: vw(1554);
+    height: vw(685);
+    background-color: white;
+    margin: auto;
+    border-radius: vw(20);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: vw(30);    
+    .assign-mechanic-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: vw(588);
+        .selected-jobs-segment{
+            display: flex;
+            margin-bottom: vw(20);
+        }
+        .left-segment{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .select-mechanic-ut-container{
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.161);
+                padding: vw(20) vw(24);
+                width: vw(475);
+                height: vw(542);
+                border-radius: vw(5);
+                background-color: #FDFDFF;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .mechanic-ut-img{
+                    width: vw(193);
+                    margin-top: vw(16);
+                    margin-bottom: vw(6);
+                }
+                .ut-underline{
+                    margin-top: vw(5);
+                    margin-bottom: vw(15);
+                    width: vw(25);
+                    height: vw(5);
+                    border-radius: vw(5);
+                    background-color: map-get($colors, primary);
+                }
+            }
+        }
+        .right-segment{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .select-mechanic-partner-container{
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.161);
+                padding: vw(20) vw(24);
+                width: vw(475);
+                height: vw(542);
+                border-radius: vw(5);
+                background-color: #FDFDFF;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .mechanic-partner-img{
+                    width: vw(193);
+                    margin-top: vw(16);
+                    margin-bottom: vw(6);
+                }
+                .partner-underline{
+                    margin-top: vw(5);
+                    margin-bottom: vw(15);
+                    width: vw(25);
+                    height: vw(5);
+                    border-radius: vw(5);
+                    background-color: #A7B3FD;
+                }
+            }
+        }
+        .select-mechanic-title{
+            font-family: 'Lato-Regular';
+            font-weight: bold;
+            font-size: vw(28);
+            margin: 0;
+        }
+        .mechanic-list-container{
+            width: 95%;
+            height: 100%;
+            overflow-y: scroll;
+            .mechanic-list{
+                .checkbox{
+                    padding: 0;
+                    margin-right: vw(20);
+                }
+                .primary-label{
+                    font-weight: 900;
+                    font-family: 'Lato-Regular';
+                    font-size: vw(14);
+                }
+                .secondary-label{
+                    font-family: 'Lato-Regular';
+                    font-size: vw(13);
+                }
+            }
+        }
+    }
+    .buttons-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: vw(27);
+        .btn-assign{
+            background-color: map-get($colors, primary);
+            margin-left: vw(17);
+            padding: vw(10) vw(60);
+            text-transform: none;
+            font-family: 'Lato-Regular';
+            font-size: vw(12);
+            border-radius: vw(5);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+            color: #1D1D1D;
+            cursor: pointer;
+        }
+        .btn-assign:disabled{
+            opacity: .5;
+        }
+        .btn-assign:hover{
+            background-color: map-get($colors, primary-dark);
+        }
+        .btn-cancel{
+            margin-left: vw(17);
+            padding: vw(10) vw(60);
+            background-color: #F2F2F4;
+            text-transform: none;
+            font-family: 'Lato-Regular';
+            font-size: vw(12);
+            border-radius: vw(5);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+            color: #1D1D1D;
+            cursor: pointer;
+        }
+        .btn-cancel:hover{
+            background-color: rgb(227, 227, 230);
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {    
+    .assign-mechanic-modal{
+        width: vw-tab(700);
+        height: vw-tab(900);
+        background-color: white;
+        overflow: hidden;
+        margin: auto;
+        border-radius: vw-tab(20);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .selected-jobs-segment{
+            width: 100%;
+            height: vw-tab(250);
+            margin: 0 0 0 vw-tab(25);
+        }
+        .assign-mechanic-container{
+            margin: vw-tab(30) 0;
+            display: flex;
+            height: vw-tab(460);
+            flex-direction: row;
+            .vertical-line{
+                width: vw-tab(1);
+                height: vw-tab(460);
+                background-color: #CECDCD;
+            }
+            .select-mechanic-ut-container{
+                width: vw-tab(335);
+                margin-right: vw-tab(20);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .mechanic-ut-img{
+                    width: vw-tab(100);
+                    margin-bottom: vw-tab(3);
+                }
+                .ut-underline{
+                    margin-top: vw-tab(3);
+                    margin-bottom: vw-tab(23);
+                    width: vw-tab(14);
+                    height: vw-tab(3);
+                    border-radius: vw-tab(5);
+                    background-color: map-get($colors, primary);
+                }
+            }
+            .select-mechanic-partner-container{
+                width: vw-tab(335);
+                margin-right: vw-tab(20);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .mechanic-partner-img{
+                    width: vw-tab(100);
+                    margin-bottom: vw-tab(3);
+                }
+                .partner-underline{
+                    margin-top: vw-tab(3);
+                    margin-bottom: vw-tab(23);
+                    width: vw-tab(14);
+                    height: vw-tab(3);
+                    border-radius: vw-tab(5);
+                    background-color: #A7B3FD;
+                }
+            }
+            .select-mechanic-title{
+                font-family: 'Lato-Regular';
+                font-weight: bold;
+                font-size: vw-tab(16);
+                margin: 0;
+            }
+            .mechanic-list-container{
+                width: 100%;
+                height: 100%;
+                overflow-y: scroll;
+                .mechanic-list{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    .checkbox{
+                        padding: 0;
+                        margin-right: vw-tab(20);
+                    }
+                    .primary-label{
+                        font-weight: 900;
+                        font-family: 'Lato-Regular';
+                        font-size: vw-tab(12);
+                        height: vw-tab(30);
+                    }
+                    .secondary-label{
+                        font-family: 'Lato-Regular';
+                        font-size: vw-tab(12);
+                    }
+                }
+            }
+        }
+        .buttons-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px vw-tab(3) vw-tab(6);
+            margin-bottom: vw-tab(30);    
+            .btn-cancel{
+                width: vw-tab(292);
+                height: vw-tab(37);
+                margin: 0;
+                margin-bottom: vw-tab(10);
+                background-color: #F2F2F4;
+                text-transform: none;
+                font-family: 'Lato-Regular';
+                font-size: vw-tab(13);
+                border-radius: vw-tab(5);
+                box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+                color: black;
+            }
+            .btn-cancel:hover{
+                background-color: rgb(227, 227, 230);
+            }       
+            .btn-assign{
+                background-color: map-get($colors, primary);
+                margin: 0;
+                text-transform: none;
+                font-family: 'Lato-Regular';
+                width: vw-tab(292);
+                height: vw-tab(37);
+                font-size: vw-tab(13);
+                border-radius: vw-tab(5);
+                box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+                color: black;
+            }
+            .btn-assign:hover{
+                background-color: map-get($colors, primary-dark);
+            }
+        }        
+    }
+}
+
+@media (max-width: 599px) {    
+    .assign-mechanic-modal{
+        overflow: hidden;
+        width: vw-mobile(300);
+        height: vw-mobile(515);
+        background-color: white;
+        margin: auto;
+        border-radius: vw-mobile(15);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        .assignment-titles{
+            display: flex;
+            flex-direction: row;
+            margin-top: vw-mobile(5);
+            width: 95%;
+            .assignment-title{
+                margin: 0 !important;
+                font-size: vw-mobile(10) !important;
+                font-family: 'Lato-Medium';
+                text-align: center;
+                color: #ADADAE;
+                font-weight: 900;
+                width: 33%;
+                border-bottom: solid vw-mobile(3) #ADADAE;
+                padding-bottom: vw-mobile(4);
+                cursor: pointer;
+            }
+            .assignment-title-choosen{
+                margin: 0 !important;
+                font-size: vw-mobile(10) !important;
+                font-family: 'Lato-Medium';
+                text-align: center;
+                font-weight: 900;
+                width: 33%;
+                border-bottom: solid vw-mobile(3) #FFD500;
+                padding-bottom: vw-mobile(4);
+                cursor: pointer;
+            }
+        }
+        .selected-jobs-segment{
+            width: 100%;
+            height: vw-mobile(345);
+            margin: vw-mobile(15) 0 vw-mobile(15) vw-mobile(10);
+        }
+        .select-mechanic-ut-container{
+            width: 100%;
+            height: vw-mobile(345);
+            margin: vw-mobile(15) vw-mobile(15) vw-mobile(15) 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .mechanic-ut-img{
+                width: vw-mobile(100);
+                margin-bottom: vw-mobile(3);
+            }
+            .ut-underline{
+                margin-top: vw-mobile(3);
+                margin-bottom: vw-mobile(23);
+                width: vw-mobile(14);
+                height: vw-mobile(3);
+                border-radius: vw-mobile(5);
+                background-color: map-get($colors, primary);
+            }
+        }
+        .select-mechanic-partner-container{
+            width: 100%;
+            height: vw-mobile(345);
+            margin: vw-mobile(15) vw-mobile(15) vw-mobile(15) 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .mechanic-partner-img{
+                width: vw-mobile(100);
+                margin-bottom: vw-mobile(3);
+            }
+            .partner-underline{
+                margin-top: vw-mobile(3);
+                margin-bottom: vw-mobile(23);
+                width: vw-mobile(14);
+                height: vw-mobile(3);
+                border-radius: vw-mobile(5);
+                background-color: #A7B3FD;
+            }
+        }
+        .select-mechanic-title{
+            font-family: 'Lato-Regular';
+            font-weight: bold;
+            font-size: vw-mobile(16);
+            margin: 0;
+        }
+        .mechanic-list-container{
+            width: 100%;
+            height: vw-mobile(210);
+            overflow-y: scroll;
+            overflow-x: hidden;
+            .mechanic-list{
+                padding-top: 0;
+                padding-bottom: 0;
+                .checkbox{
+                    padding: 0;
+                    margin-right: vw-mobile(10);
+                }
+                .primary-label{
+                    font-weight: 900;
+                    font-family: 'Lato-Regular';
+                    white-space: nowrap;
+                    font-size: vw-mobile(10);
+                    height: vw-mobile(15);
+                }
+                .secondary-label{
+                    font-family: 'Lato-Regular';
+                    font-size: vw-mobile(10);
+                }
+            }
+        }
+        .buttons-row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px vw-mobile(3) vw-mobile(6);
+            margin-bottom: vw-mobile(30);    
+            .btn-cancel{
+                width: vw-mobile(292);
+                height: vw-mobile(37);
+                margin: 0;
+                margin-bottom: vw-mobile(10);
+                background-color: #F2F2F4;
+                text-transform: none;
+                font-family: 'Lato-Regular';
+                font-size: vw-mobile(13);
+                border-radius: vw-mobile(5);
+                box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+                color: black;
+            }
+            .btn-cancel:hover{
+                background-color: rgb(227, 227, 230);
+            }       
+            .btn-assign{
+                background-color: map-get($colors, primary);
+                margin: 0;
+                text-transform: none;
+                font-family: 'Lato-Regular';
+                width: vw-mobile(292);
+                height: vw-mobile(37);
+                font-size: vw-mobile(13);
+                border-radius: vw-mobile(5);
+                box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161);
+                color: black;
+            }
+            .btn-assign:hover{
+                background-color: map-get($colors, primary-dark);
+            }
+        }        
+    }
+}

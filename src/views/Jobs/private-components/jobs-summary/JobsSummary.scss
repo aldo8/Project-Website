@@ -1,0 +1,288 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+@media (min-width: 1026px) {
+    .card-container{
+        width: vw(238.22) !important;
+        height: vw(186.07) !important;
+        margin-right: vw(33.78) !important;
+        margin-top: vw(17) !important;
+        border: none !important;
+        box-shadow: 0px vw(10) vw(30) rgba(0, 0, 0, 0.161) !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5vw !important;
+    
+        .card-content{
+            flex: 1;
+            padding: vw(19) vw(29) vw(19) vw(29) !important;
+            .card-content-title{
+                text-align: center;
+                font-family: 'Lato-Bold' !important;
+                font-size: vw(17);
+                line-height: vw(20);
+                margin: 0;
+            }
+            .card-content-total{
+                font-family: 'SFUIDisplay-Bold';
+                margin: 0;
+                font-size: vw(54);
+                line-height: vw(64);
+                text-align: center;
+            }
+            .card-content-detail-row{
+                display: flex;
+                flex-direction: row;
+                .todo{
+                    flex: 75;
+                    display: flex;
+                    flex-direction: column;
+                    .todo-total{
+                        flex: 1;
+                        font-family: 'SFUIDisplay-Bold';
+                        margin: 0;
+                        font-size: vw(32);
+                        line-height: vw(38);
+                        text-align: center;
+                        color: map-get($colors, primary);
+                    }
+                }
+                .divider-container{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    .vertical-line{
+                        height: 70%;
+                        background-color: #707070;
+                    }
+                }
+                .handover{
+                    flex: 75;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    .handover-total{
+                        flex: 1;
+                        font-family: 'SFUIDisplay-Bold';
+                        margin: 0;
+                        font-size: vw(32);
+                        line-height: vw(38);
+                        text-align: center;
+                        color: #FF5656;
+                    }
+                }
+                .column-title{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        font-size: vw(12);
+                        line-height: vw(15);
+                        font-family: 'Lato-Regular';
+                        opacity: 0.62;
+                        text-align: center;
+                        color: #3C3B3B;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .card-container{
+        width: vw-tab(222) !important;
+        height: vw-tab(174) !important;
+        margin-right: vw-tab(20) !important;
+        margin-top: vw-tab(15) !important;
+        border: none !important;
+        box-shadow: 0px vw-tab(10) vw-tab(30) rgba(0, 0, 0, 0.161) !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: vw-tab(10) !important;    
+        .card-content{
+            flex: 1;
+            padding: vw-tab(13) !important;
+            .card-content-title{
+                text-align: center;
+                font-family: 'Lato-Bold' !important;
+                font-size: vw-tab(17);
+                line-height: vw-tab(20);
+                margin: 0;
+                color: #3C3B3B;                
+            }
+            .card-content-total{
+                font-family: 'SFUIDisplay-Bold';
+                margin: 0;
+                font-size: vw-tab(54);
+                line-height: vw-tab(64);
+                text-align: center;
+                color: #3C3B3B;  
+            }
+            .card-content-detail-row{
+                display: flex;
+                flex-direction: row;
+                .todo{
+                    flex: 75;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .todo-total{
+                        flex: 1;
+                        font-family: 'SFUIDisplay-Bold';
+                        margin: 0;
+                        font-size: vw-tab(32);
+                        line-height: vw-tab(38);
+                        color: map-get($colors, primary);
+                    }
+                }
+                .divider-container{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    .vertical-line{
+                        height: 70%;
+                        background-color: #707070;
+                    }
+                }
+                .handover{
+                    flex: 75;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .handover-total{
+                        flex: 1;
+                        font-family: 'SFUIDisplay-Bold';
+                        margin: 0;
+                        font-size: vw-tab(32);
+                        line-height: vw-tab(38);
+                        text-align: center;
+                        color: #FF5656;
+                    }
+                }
+                .column-title{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: vw-tab(50);
+                    p{
+                        font-size: vw-tab(12);
+                        line-height: vw-tab(15);
+                        font-family: 'Lato-Regular';
+                        opacity: 0.62;
+                        text-align: center;
+                        color: #3C3B3B;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+@media only screen and (max-width: 599px) {
+    .card-container{
+        width: 100% !important;
+        height: vw-mobile(102) !important;
+        margin-top: vw-mobile(10) !important;
+        border: none !important;
+        box-shadow: 0px vw-mobile(3) vw-mobile(6) rgba(0, 0, 0, 0.161) !important;
+        display: flex !important;
+        border-radius: vw-mobile(5) !important;    
+        .card-content{
+            padding: vw-mobile(13) !important;
+            flex: 1;
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            .total{
+                flex: 1;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .card-content-title{
+                    font-family: 'Lato-Bold' !important;
+                    font-size: vw-mobile(14);
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    color: black;                
+                }
+                .card-content-total{
+                    font-family: 'Lato-Bold';
+                    text-align: center;
+                    font-size: vw-mobile(33);
+                    margin: 0;
+                    padding: 0;
+                    color: black;  
+                }
+            }          
+            
+            .vertical-line{
+                height: 100%;
+                width: vw-mobile(1);
+                background-color: map-get($colors, primary);
+                margin: 0 vw-mobile(14);
+            }
+            
+            .card-content-detail-col{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                .todo{
+                    display: flex;
+                    height: vw-mobile(17);
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .todo-total{
+                        font-family: 'Lato-Bold';
+                        font-size: vw-mobile(14);
+                        line-height: vw-mobile(17);
+                        color: map-get($colors, primary);
+                    }
+                }
+                
+                .handover{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: vw-mobile(17);
+                    margin-top: vw-mobile(8);
+                    .handover-total{
+                        font-family: 'Lato-Bold';
+                        font-size: vw-mobile(14);
+                        line-height: vw-mobile(17);
+                        color: #FF5656;
+                    }
+                }
+                .column-title{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    p{
+                        font-size: vw-mobile(12);
+                        line-height: vw-mobile(14);
+                        font-family: 'Lato-Medium';
+                        opacity: 0.62;
+                        color: #3C3B3B;
+                    }
+                }
+            }
+        }
+    }    
+}

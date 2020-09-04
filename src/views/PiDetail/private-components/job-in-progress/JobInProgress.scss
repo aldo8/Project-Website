@@ -1,0 +1,368 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+.job-inprogress-detail-modal{
+    width: vw(1310);
+    height: vw(370);
+    background-color: white;
+    margin: auto;
+    border-radius: vw(5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: vw(29) vw(22);
+    .icons-row{
+        display: flex;
+        flex-direction: row;
+        width: vw(1258);
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: vw(75);
+        .progress-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .icon-progress-complete{
+                height: vw(45);
+            }
+            .icon-progress-current{
+                height: vw(55);
+            }
+            .icon-progress-not-yet{
+                height: vw(45);
+            }
+            .staging-line{
+                position: relative;
+                width: vw(190);
+                margin-left: vw(12);
+                margin-right: vw(12);
+            }
+        }
+        .progress-container:first-child{
+            margin-left: vw(30);
+        }
+    }
+    .labels-row{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: vw(40);
+        padding-top: vw(18);
+        padding: 0;
+        .waiting-to-start{
+            margin-right: vw(85);
+            font-family: 'SFUIText-Bold';
+            font-size: vw(17);
+            line-height: vw(20);
+            width: vw(170);
+            text-align: center;
+        }
+        .waiting-to-start:first-child{
+            margin-left: vw(50);
+        }
+        .waiting-to-start:last-child{
+            margin-right: 0;
+        }
+    }
+    .shift-details-row{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .shift-details-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: vw(219.22);
+            height: vw(235.07);
+            margin-top: vw(30);
+            padding: vw(14) vw(22.5) vw(14) vw(22.5);
+        }
+        .shift-details-container-not-yet{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: vw(219.22);
+            height: vw(235.07);
+            margin-top: vw(30);
+            padding: vw(14) vw(22.5) vw(14) vw(22.5);
+            background-color: rgba(255,213,0, 0.13);
+            visibility: hidden;
+        }
+        .shift-details-container-current{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: vw(219.22);
+            height: vw(235.07);
+            margin-top: vw(30);
+            padding: vw(14) vw(22.5) vw(14) vw(22.5);
+            background-color: rgba(255,213,0, 0.13);
+            border-radius: 1vw;
+        }
+        .shift-title{
+            font-family: 'SFUIText-Bold';
+            font-size: vw(15);
+            line-height: vw(17);
+            margin: 0;
+            margin-top: vw(16);
+            margin-bottom: vw(18);
+        }
+        .shift-title:first-child{
+            margin-top: 0;
+        }
+        .shift-detail-container{
+            display: flex;
+            flex-direction: row;
+            opacity: 0.7;
+            font-family: 'SFUIText-Regular';
+            font-size: vw(14);
+            line-height: vw(16);
+            p{
+                margin: 0 0 vw(10) 0;
+            }
+            .label-container{
+                .label-title{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(16);
+                    padding-right: vw(20);
+                }
+                .label-date{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(16);
+                    padding-right: vw(10);
+                }
+                .label-right{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(14);
+                    line-height: vw(16);
+                    padding-left: vw(20);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .job-inprogress-detail-modal{
+        width: vw-tab(450);
+        height: vw-tab(800);
+        background-color: white;
+        margin: auto;
+        border-radius: vw-tab(15);
+        display: flex;
+        flex-direction: column;
+        padding: vw-tab(15) vw-tab(30);
+        .job-inprogress-content{
+            display: flex;
+            flex-direction: row;
+            .icons-column{
+                margin-top: vw-tab(35);
+                display: flex;
+                flex-direction: column;
+                width: vw-tab(175);
+                height: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                .progress-container {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    .icon-progress-complete{
+                        height: vw-tab(45);
+                    }
+                    .execution{
+                        font-family: 'Lato-Medium';
+                        font-size: vw-tab(13);
+                        line-height: vw-tab(16);
+                    }
+                    .staging-line-1{
+                        position: relative;
+                        height: vw-tab(50);
+                        margin-bottom: vw-tab(17);
+                    }
+                }
+            }
+            .shift-details-row{
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                .shift-details-container{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: vw-tab(175);
+                    height: vw-tab(107);
+                    padding: vw-tab(15) vw-tab(30);
+                    background-color: rgba(60, 59, 59, 0.05);
+                    border-radius: vw(10);
+                    .shifts{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                }
+                .shift-details-container-current{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: vw-tab(175);
+                    height: vw-tab(107);
+                    padding: vw-tab(15) vw-tab(30);
+                    background-color: rgba(255,213,0, 0.13);
+                    border-radius: vw(10);
+                    .shifts{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                }
+                .shift-title{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-tab(15);
+                    line-height: vw-tab(17);
+                    margin: 0;
+                    margin-top: vw-tab(16);
+                    margin-bottom: vw-tab(18);
+                }
+                .shift-title:first-child{
+                    margin-top: 0;
+                }
+                .shift-detail-container{
+                    display: flex;
+                    flex-direction: row;
+                    opacity: 0.7;
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw-tab(14);
+                    line-height: vw-tab(16);
+                    p{
+                        margin: 0 0 vw-tab(12) 0;
+                    }
+                    .label-container{
+                        .label-title{
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(14);
+                            line-height: vw-tab(16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .job-inprogress-detail-modal{
+        width: vw-mobile(250);
+        height: vw-mobile(435);
+        background-color: white;
+        margin: auto;
+        border-radius: vw-mobile(15);
+        display: flex;
+        flex-direction: column;
+        padding: vw-mobile(15);
+        .job-inprogress-content{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            justify-content: space-between;
+            .icons-column{
+                margin-top: vw-mobile(25);
+                display: flex;
+                flex-direction: column;
+                width: vw-mobile(80);
+                height: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                .progress-container {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    .icon-progress-complete{
+                        height: vw-mobile(27);
+                    }
+                    .execution{
+                        font-family: 'Lato-Medium';
+                        font-size: vw-mobile(10);
+                    }
+                    .staging-line-1{
+                        position: relative;
+                        height: vw-mobile(20);
+                        margin-bottom: vw-mobile(3);
+                    }
+                }
+            }
+            .shift-details-row{
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;          
+                width: fit-content;
+                margin-top: vw-mobile(10);
+                .shift-details-container{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: vw-mobile(120);
+                    height: vw-mobile(65);
+                    padding: vw-mobile(5) vw-mobile(10);
+                    background-color: rgba(60, 59, 59, 0.05);
+                    border-radius: vw-mobile(5);
+                    .shifts{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                }
+                .shift-details-container-current{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: vw-mobile(120);
+                    height: vw-mobile(65);
+                    padding: vw-mobile(5) vw-mobile(10);
+                    background-color: rgba(255,213,0, 0.13);
+                    border-radius: vw(5);
+                    .shifts{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                }
+                .shift-title{
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw-mobile(10);
+                    line-height: vw-mobile(12);
+                    margin: 0;
+                    margin-bottom: vw-mobile(13);
+                }
+                .shift-title:first-child{
+                    margin-top: 0;
+                }
+                .shift-detail-container{
+                    display: flex;
+                    flex-direction: row;
+                    opacity: 0.7;
+                    font-family: 'SFUIText-Regular';
+                    font-size: vw-mobile(9);
+                    p{
+                        margin: 0 0 vw-mobile(12) 0;
+                    }
+                    .label-container{
+                        .label-title{
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-mobile(9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

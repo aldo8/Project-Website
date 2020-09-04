@@ -1,0 +1,1398 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+
+.modal-container{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    .modal-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        .selected-img-container{
+            height: 70vh;
+            background-color: white;
+            margin: auto;
+            border-radius: vw(10);
+            display: flex;
+            flex-direction: column;
+            padding: vw(10);
+            width: fit-content;
+            .selected-img {
+                height: 95%;;
+                border-radius: vw(10);
+                margin-top: vw(10);
+            }
+        }
+    }
+}
+.bes-detail-modal{
+    // overflow: scroll;
+    width: vw(1153);
+    top: 5vh;
+    height: 90vh;
+    background-color: white;
+    margin: auto;
+    border-radius: vw(10);
+    display: flex;
+    flex-direction: column;
+    padding: vw(11) vw(13) vw(40) vw(40);      
+    .modal-header{
+        display: flex;
+        align-items: center;
+        height: vw(36);
+        p{
+            margin: 0;
+            font-size: vw(30);
+            font-family: 'SFUIText-Bold';
+            color: #030303;
+        }
+    }
+    .modal-content-container{
+        display: flex;
+        flex-direction: row;
+        float: 1;
+        font-family: 'SFUIText-Bold';
+        margin-top: vw(28);
+        height: 100%;
+        padding: 0;
+        .problem-evidence-container{
+            width: vw(190);
+            padding: 0 vw(47) 0 0;
+            .error-text{
+                margin: vw(28) 0 vw(10) 0;
+                font-size: vw(13);
+                font-family: 'SFUIDisplay-Medium';
+                color: red;
+                text-align: center;
+                width: 100%;
+            }
+            .image-container{
+                position: relative;
+                width: vw(188);
+                height: fit-content;    
+                .image-header{
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 100%;
+                    margin-top: vw(20);
+                    margin-bottom: vw(5);
+                    height:  vw(40);
+                    position: relative;
+                    .image-label{
+                        font-size: vw(13);
+                        font-family: 'SFUIDisplay-Bold';
+                        opacity: 0.5;
+                    }
+                    .edit-img-container{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        height: 100%;
+                        .add-image-input{
+                            position: absolute;
+                            width: 100%;
+                            height: vw(40);
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                        }
+                        .edit-img{
+                            height: vw(17),
+                        }
+                    }
+                }            
+                .tractor-img{
+                    width: 100%;
+                    height: vw(134);
+                }
+            }
+            .add-image{
+                position: relative;
+                width: vw(188);
+                height: vw(134);
+                margin-top: vw(50);
+                .add-image-icon{
+                    width: 100%;
+                    height: 100%;
+                }
+                .add-image-input{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
+        }
+        .problem-identity-container{
+            width: vw(446);
+            margin-right: vw(40);
+            .item-row-container{
+                display: flex;
+                flex-direction: row;
+                margin-top: vw(26.5);
+                justify-content: space-between;
+                .item-column-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: vw(209);
+                    .item{
+                        margin-bottom: vw(35);
+                        height: vw(55);
+                        .form-control{
+                            width: 100%;
+                            height: 100%;
+                            .select-item{
+                                font-size: vw(12);                            
+                                color: #3C3B3B;
+                                background-color: white;
+                                font-family: 'SFUIDisplay-Bold';                            
+                            }
+                        }
+                        .item-label{
+                            font-family: 'SFUIDisplay-Bold';
+                            font-size: vw(13);
+                            margin: 0;
+                            color: #3C3B3B;
+                        }
+                        .text-input{
+                            font-family: 'SFUIDisplay-Bold';
+                            font-size: vw(12);
+                            margin-top: vw(10);
+                            width: 100%;
+                            padding: 0 vw(25) vw(10) 0;
+                        }
+                        .text-input-ellipsis{
+                            font-family: 'SFUIDisplay-Bold';
+                            font-size: vw(12);
+                            margin-top: vw(10);
+                            width: vw(160);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            padding: 0 vw(25) vw(10) 0;
+                        }
+                        .text-input-form{
+                            font-family: 'SFUIDisplay-Bold';
+                            font-size: vw(12);
+                            margin-top: vw(0);
+                            width: 100%;
+                            padding: 0 vw(25) vw(5) 0;
+                        }
+                        .arrow-down{
+                            position: absolute;
+                            left: vw(818);
+                            font-size: vw(30);
+                            opacity: 0.4;
+                        }
+                        .arrow-down2{
+                            position: absolute;
+                            left: vw(1054);
+                            font-size: vw(30);
+                            opacity: 0.4;
+                        }
+                        .item-row-button{
+                            display: flex;
+                            flex-direction: row;
+                            margin-top: vw(7);
+                            .button{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: vw(40);
+                                height: vw(37);
+                                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                                background: #FCFCFC;
+                                font-size: vw(22);
+                                cursor: pointer;
+                            }
+                            .count{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-family: 'SFUIDisplay-Bold';
+                                margin-left: vw(10);
+                                margin-right: vw(10);
+                                width: vw(79);
+                                height: vw(37);
+                                box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+                                font-size: vw(12);
+                            }
+                        }
+                    }
+                    .item-problem-desc{
+                        margin-bottom: vw(35);
+                        height: vw(55);
+                        width: vw(450);
+                        .item-label{
+                            font-family: 'SFUIDisplay-Bold';
+                            font-size: vw(13);
+                            margin: 0;
+                            color: #3C3B3B;
+                        }
+                    }
+                }
+            }
+        }
+        .part-requirement-container{
+            width: vw(348);
+            height: vw(660);         
+            .spare-part-list {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: vw(100);
+                overflow-y: scroll;
+                overflow-x: hidden;
+                white-space: nowrap;
+                background-color: white;
+                .spare-parts{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .spare-part-list-item {
+                        padding: vw(6) 0;
+                        font-family: 'Lato-Bold';
+                        font-weight: 500;
+                        color: #1D1D1D;
+                        font-size: vw(12);
+                        line-height: vw(14);
+                    }
+                    .add-part-button{
+                        padding: vw(2) vw(10);
+                        background-color: #F2F4F4;
+                        font-size: vw(12);
+                        margin-right: vw(5);
+                        cursor: pointer;
+                    }
+                    .add-part-button:hover{
+                        background-color: #e5e5e5;
+                        color: #3C3B3B;
+                    }
+                }
+            }
+            .error-text{
+                margin: vw(10) 0 0 0;
+                font-size: vw(11);
+                height: vw(13);
+                font-family: 'Lato-Medium';
+                color: red;
+                width: 100%;
+            }
+            .btn-add-part{
+                background-color: #F6F6F6;
+                width: 100%;
+                font-size: vw(14);
+                font-family: 'SFUIText-Bold';
+                color: #3C3B3B;
+                margin-top: vw(21);
+            }
+            .part-validation{
+                width: vw(20);
+                .validation-icon{
+                    size: vw(12);
+                    width: vw(12);
+                    height: vw(12);
+                }
+            }
+            .search-input {
+                width: 99%; 
+                background-color: #f6f6f6 !important;
+                margin-top: vw(15);
+                margin-bottom: vw(15);
+            }
+            .row-container-header{
+                display: flex;
+                flex-direction: row;
+                border-top-style: dotted;
+                border-top-color: rgba(112,112,112,0.37);
+                border-top-width: 100%;
+                border-bottom-style: dotted;
+                border-bottom-color: rgba(112,112,112,0.37);
+                border-top-width: 100%;
+                margin-top: vw(23.5);
+                padding-bottom: vw(7);
+                padding-top: vw(7);
+                .part-number{
+                    flex: 1;
+                    color: #1D1D1D;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(10);
+                    opacity: 0.52;
+                    padding: 0;
+                }
+                .part-description{
+                    flex: 1;
+                    color: #1D1D1D;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(10);
+                    opacity: 0.52;
+                }
+                .qty{
+                    flex: 1;
+                    color: #1D1D1D;
+                    font-family: 'SFUIText-Bold';
+                    font-size: vw(10);
+                    opacity: 0.52;
+                }
+            }
+            .container-content{
+                display: flex;
+                flex-direction: column;
+                border-bottom-style: dotted;
+                height: vw(110);
+                border-bottom-color: rgba(112,112,112,0.37);
+                border-bottom-width: 100%;
+                padding-bottom: vw(2);
+                padding-top: vw(12);
+                overflow-y: scroll;
+                .row-container-content{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: vw(8);
+                    .part-number{
+                        width: vw(105);
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw(10);
+                        margin-right: vw(10);
+                    }
+                    .part-description{
+                        width: vw(105);
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw(10);
+                        margin-right: vw(10)
+                    }
+                    .qty{
+                        width: vw(105);
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw(10);
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .qty-val{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: vw(5);
+                            margin-right: vw(5);
+                            width: vw(23);
+                            height: vw(17);
+                            border: 1px solid #CACACA;
+                        }
+                        .operation{
+                            width: vw(18);
+                            text-align: center;
+                            font-size: vw(18);
+                            color: #CACACA;
+                            cursor: pointer;
+                        }
+                        .part-delete{
+                            width: vw(12);
+                            height: vw(15);
+                            margin-left: vw(5);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .img-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: vw(10);
+                .beshand{
+                    width: vw(130);
+                    height: vw(100);
+                }
+                .beshand-bms{
+                    width: vw(310);
+                    height: vw(270);
+                    margin-top: vw(20);
+                    margin-bottom: vw(30);
+                }
+            }
+            .btn-save{
+                background-color: #FFD500;
+                margin-left: vw(180);
+                margin-top: vw(15);
+                width: vw(165);
+                padding: vw(15) 0;
+                text-align: center;
+                text-transform: none;
+                font-size: vw(14);
+                font-family: 'SFUIDisplay-Regular';
+                border-radius: vw(5);
+                font-weight: 600;
+                cursor: pointer;
+            }
+            .btn-row{
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                margin-top: vw(30);
+                justify-content: space-between;
+                margin-bottom: vw(15);
+                .btn-approve{
+                    border: vw(2) solid #707070;
+                    width: vw(165);
+                    height: vw(44.3);
+                    text-transform: none;
+                    font-size: vw(14);
+                    font-family: 'SFUIDisplay-Regular';
+                    border-radius: vw(5);
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+        .title{
+            margin: 0 !important;
+            font-size: vw(21) !important;
+            font-family: 'SFUIText-Bold';
+            font-weight: 900;
+        }
+        .label{
+            font-family: 'SFUIDisplay-Bold';
+            font-size: vw(13);
+            margin: 0;
+            color: #3C3B3B;
+            padding:0 1.30208vw .52083vw 0;
+            margin-top: 0.52083vw;
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+    .modal-container{
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        .modal-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            .selected-img-container{
+                width: 70vw;
+                background-color: white;
+                margin: auto;
+                border-radius: vw-tab(10);
+                display: flex;
+                flex-direction: column;
+                padding: vw-tab(10);
+                height: fit-content;
+                .selected-img {
+                    width: 100%;
+                    border-radius: vw-tab(10);
+                    margin-top: vw-tab(10);
+                }
+            }
+        }
+    }
+    .bes-detail-modal{
+        width: vw-tab(600);
+        height: fit-content;
+        overflow: hidden;
+        background-color: white;
+        margin: auto;
+        border-radius: vw-tab(10);
+        display: flex;
+        flex-direction: column;
+        padding: vw-tab(25);     
+        .modal-header{
+            display: flex;
+            align-items: center;
+            height: vw-tab(29);
+            .modal-header-line{
+                height: vw-tab(19);
+                width: vw-tab(9);
+                margin-right: vw-tab(5);
+                background-color: #FFD500;
+            }
+            p{
+                margin: 0;
+                font-size: vw-tab(24);
+                font-family: 'SFUIText-Bold';
+                color: #030303;
+            }
+        }
+        .modal-content-container{
+            display: flex;
+            flex-direction: column;
+            float: 1;
+            font-family: 'SFUIText-Bold';
+            margin-top: vw-tab(28);
+            height: 100%;
+            padding: 0;
+            .titles{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                .title{
+                    margin: 0 !important;
+                    font-size: vw-tab(18) !important;
+                    font-family: 'Lato-Medium';
+                    color: #ADADAE;
+                    font-weight: 900;
+                    width: 33%;
+                    border-bottom: solid vw-tab(3) #ADADAE;
+                    padding-bottom: vw-tab(4);
+                    cursor: pointer;
+                }
+                .title-choosen{
+                    margin: 0 !important;
+                    font-size: vw-tab(18) !important;
+                    font-family: 'Lato-Medium';
+                    font-weight: 900;
+                    width: 33%;
+                    border-bottom: solid vw-tab(3) #FFD500;
+                    padding-bottom: vw-tab(4);
+                    cursor: pointer;
+                }
+            }
+            .problem-evidence-container{
+                width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;                
+                .error-text{
+                    margin: vw-tab(28) 0 vw-tab(10) 0;
+                    font-size: vw-tab(13);
+                    font-family: 'SFUIDisplay-Medium';
+                    color: red;
+                    text-align: center;
+                    width: 100%;
+                }
+                .image-container{
+                    width: vw-tab(190);  
+                    .image-header{
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        width: 100%;
+                        height:  vw-tab(40);
+                        position: relative;
+                        .image-label{
+                            font-size: vw-tab(12);
+                            font-family: 'SFUIDisplay-Bold';
+                            opacity: 0.5;
+                        }
+                        .edit-img-container{
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            height: 100%;
+                            .add-image-input{
+                                position: absolute;
+                                width: 100%;
+                                height: vw-tab(40);
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                            }
+                            .edit-img{
+                                height: vw-tab(15),
+                            }
+                        }
+                    }           
+                    .tractor-img{
+                        width: vw-tab(190); 
+                        height: vw-tab(134);
+                    }
+                    .add-image-input{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
+                }
+                .add-image{
+                    position: relative;
+                    width: vw-tab(190);
+                    height: vw-tab(155);
+                    margin-top: vw-tab(30);
+                    .add-image-icon{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .add-image-input{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+            
+            .problem-identity-container{
+                width: 100%;
+                .item-row-container{                    
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: vw-tab(47);
+                    width: vw-tab(600);
+                    justify-content: space-between;
+                    .item-column-container{
+                        display: flex;
+                        flex-direction: column;
+                        width: vw-tab(260);
+                        margin-right: vw-tab(40);
+                        .item{
+                            margin-bottom: vw-tab(35);
+                            height: vw-tab(55);
+                            .form-control{
+                                width: 100%;
+                                height: 100%;
+                                .select-item{
+                                    margin: vw-tab(5) 0 vw-tab(10) 0;
+                                    font-size: vw-tab(12);                     
+                                    color: #3C3B3B;
+                                    background-color: white;
+                                    font-family: 'SFUIDisplay-Bold';                            
+                                }
+                            }
+                            .item-label{
+                                font-family: 'SFUIDisplay-Bold';
+                                font-size: vw-tab(13);
+                                margin: 0;
+                                color: #3C3B3B;
+                            }      
+                            .text-input{
+                                font-family: 'SFUIDisplay-Bold';
+                                font-size: vw-tab(12);
+                                margin-top: vw-tab(5);
+                                width: 100%;
+                                padding: 0 0 vw-tab(10) 0;
+                            }
+                            .text-input-form{
+                                font-family: 'SFUIDisplay-Bold';
+                                font-size: vw-tab(12);
+                                margin-top: vw-tab(0);
+                                width: 100%;
+                                padding: 0 vw-tab(25) vw-tab(5) 0;
+                            }
+                            .arrow-down{
+                                position: absolute;
+                                left: vw-tab(280);
+                                font-size: vw-tab(30);
+                                opacity: 0.4;
+                            }
+                            .arrow-down2{
+                                position: absolute;
+                                left: vw-tab(580);
+                                font-size: vw-tab(30);
+                                opacity: 0.4;
+                            }
+                            .item-row-button{
+                                display: flex;
+                                flex-direction: row;
+                                margin-top: vw-tab(7);
+                                .button{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: vw-tab(40);
+                                    height: vw-tab(37);
+                                    box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+                                    background: #FCFCFC;
+                                    font-size: vw(50);
+                                }
+                                .count{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-family: 'SFUIDisplay-Bold';
+                                    margin-left: vw-tab(10);
+                                    margin-right: vw-tab(10);
+                                    width: vw-tab(79);
+                                    height: vw-tab(37);
+                                    box-shadow: 0px vw-tab(3) vw-tab(6) rgba(0, 0, 0, 0.161);
+                                    font-size: vw-tab(12);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .part-requirement-container{
+                width: 100%;
+                height: 100%;
+                justify-self: center;
+                align-self: flex-end; 
+                .spare-part-list {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: vw-tab(120);
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    white-space: nowrap;
+                    background-color: white;
+                    .spare-parts{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: vw-tab(5);
+                        .spare-part-list-item {
+                            padding: vw-tab(6) 0;
+                            font-family: 'Lato-Bold';
+                            font-weight: 500;
+                            color: #1D1D1D;
+                            font-size: vw-tab(16);
+                            line-height: vw-tab(18);
+                        }
+                        .add-part-button{
+                            padding: vw-tab(5) vw-tab(15);
+                            background-color: #F2F4F4;
+                            font-size: vw-tab(20);
+                            margin-right: vw-tab(5);
+                            cursor: pointer;
+                        }
+                        .add-part-button:hover{
+                            background-color: #e5e5e5;
+                            color: #3C3B3B;
+                        }
+                    }
+                }
+                .error-text{
+                    margin: vw-tab(10) 0 0 0;
+                    font-size: vw-tab(14);
+                    height: vw-tab(13);
+                    font-family: 'Lato-Medium';
+                    color: red;
+                    width: 100%;
+                }
+                .part-validation{
+                    width: vw-tab(35);
+                    .validation-icon{
+                        width: vw-tab(16);
+                        height: vw-tab(16);
+                    }
+                }
+                .search-input {
+                    width: 99%; 
+                    background-color: #f6f6f6 !important;
+                    margin-top: vw-tab(15);
+                    margin-bottom: vw-tab(15);
+                }
+                .row-container-header{
+                    display: flex;
+                    flex-direction: row;
+                    border-top-style: dotted;
+                    border-top-color: rgba(112,112,112,0.37);
+                    border-top-width: 100%;
+                    border-bottom-style: dotted;
+                    border-bottom-color: rgba(112,112,112,0.37);
+                    border-top-width: 100%;
+                    margin-top: vw-tab(23.5);
+                    padding-bottom: vw-tab(7);
+                    padding-top: vw-tab(7);
+                    .part-number{
+                        flex: 1;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(12);
+                        opacity: 0.52;
+                        padding: 0;
+                    }
+                    .part-description{
+                        flex: 1.2;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(12);
+                        opacity: 0.52;
+                    }
+                    .qty{
+                        flex: 0.8;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-tab(12);
+                        opacity: 0.52;
+                    }
+                }
+                .container-content{
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom-style: dotted;
+                    height: vw-tab(150);
+                    border-bottom-color: rgba(112,112,112,0.37);
+                    border-bottom-width: 100%;
+                    padding-bottom: vw-tab(2);
+                    padding-top: vw-tab(12);
+                    overflow-y: scroll;
+                    .row-container-content{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: vw-tab(8);
+                        .part-number{
+                            flex: 1;
+                            color: #1D1D1D;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(16);
+                            margin-right: vw-tab(15);
+                        }
+                        .part-description{
+                            flex: 1;
+                            color: #1D1D1D;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(16);
+                            margin-right: vw-tab(15)
+                        }
+                        .qty{
+                            flex: 1;
+                            color: #1D1D1D;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-tab(16);
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .qty-val{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0;
+                                width: vw-tab(23);
+                                height: vw-tab(17);
+                                border: 1px solid #CACACA;
+                            }
+                            .operation{
+                                width: vw-tab(18);
+                                text-align: center;
+                                font-size: vw-tab(23);
+                                padding: 0 vw-tab(15);
+                                color: #CACACA;
+                                cursor: pointer;
+                            }
+                            .part-delete{
+                                width: vw-tab(17);
+                                height: vw-tab(23);
+                                margin-left: vw-tab(5);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .img-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: vw-tab(10);
+                }
+                .btn-row{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    margin-top: vw-tab(30);
+                    justify-content: space-between;
+                    margin-bottom: vw-tab(15);
+                    .btn-save{
+                        background-color: #FFD500;
+                        margin: 0;
+                        width: vw-tab(165);
+                        padding: vw-tab(13) 0;
+                        text-align: center;
+                        text-transform: none;
+                        font-size: vw-tab(17);
+                        font-family: 'SFUIDisplay-Regular';
+                        border-radius: vw-tab(5);
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    .btn-approve{
+                        border: vw-tab(2) solid #707070;
+                        width: vw-tab(165);
+                        height: vw-tab(44.3);
+                        text-transform: none;
+                        font-size: vw-tab(17);
+                        font-family: 'SFUIDisplay-Regular';
+                        border-radius: vw-tab(5);
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {    
+    .modal-container{
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        .modal-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            .selected-img-container{
+                width: 80vw;
+                background-color: white;
+                margin: auto;
+                border-radius: vw-mobile(10);
+                display: flex;
+                flex-direction: column;
+                padding: vw-mobile(5);
+                height: fit-content;
+                .selected-img {
+                    width: 100%;
+                    border-radius: vw-mobile(10);
+                    margin-top: vw-mobile(5);
+                }
+            }
+        }
+    }
+    .bes-detail-modal{
+        width: vw-mobile(300);
+        height: fit-content;
+        overflow: hidden;
+        background-color: white;
+        margin: auto;
+        border-radius: vw-mobile(10);
+        display: flex;
+        flex-direction: column;
+        padding: vw-mobile(15);      
+        .modal-container{
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+            .modal-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                .selected-img{
+                    width: 70vw;
+                }
+            }
+        }
+        .modal-header{
+            display: flex;
+            align-items: center;
+            height: vw-mobile(20);
+            .modal-header-line{
+                height: vw-mobile(20);
+                width: vw-mobile(9);
+                margin-right: vw-mobile(10);
+                background-color: #FFD500;
+            }
+            p{
+                margin: 0;
+                font-size: vw-mobile(16);
+                font-family: 'SFUIText-Bold';
+                color: #030303;
+            }
+        }
+        .modal-content-container{
+            display: flex;
+            flex-direction: column;
+            float: 1;
+            font-family: 'SFUIText-Bold';
+            margin-top: vw-mobile(15);
+            height: 100%;
+            padding: 0;
+            .titles{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                .title{
+                    margin: 0 !important;
+                    font-size: vw-mobile(10) !important;
+                    line-height: vw-mobile(12);
+                    padding: 0;
+                    font-family: 'Lato-Medium';
+                    font-weight: 900;
+                    width: 33%;
+                    border-bottom: solid vw-mobile(3) #ADADAE;
+                    padding-bottom: vw-mobile(4);
+                    cursor: pointer;
+                }
+                .title-choosen{
+                    margin: 0 !important;
+                    font-size: vw-mobile(10) !important;
+                    line-height: vw-mobile(12);
+                    padding: 0;
+                    font-family: 'Lato-Medium';
+                    font-weight: 900;
+                    width: 33%;
+                    border-bottom: solid vw-mobile(3) #FFD500;
+                    padding-bottom: vw-mobile(5);
+                    cursor: pointer;
+                }
+            }
+            .problem-evidence-container{
+                width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;       
+                margin-top: vw-mobile(2);         
+                .error-text{
+                    margin: vw-mobile(10) 0 vw-mobile(0) 0;
+                    font-size: vw-mobile(13);
+                    font-family: 'SFUIDisplay-Medium';
+                    color: red;
+                    width: 100%;
+                }
+                .image-container{
+                    width: 47%;         
+                    .image-header{
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        width: 100%;
+                        height:  vw-mobile(30);
+                        position: relative;
+                        .image-label{
+                            font-size: vw-mobile(10);
+                            font-family: 'SFUIDisplay-Bold';
+                            opacity: 0.5;
+                        }
+                        .edit-img-container{
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            height: 100%;
+                            .add-image-input{
+                                position: absolute;
+                                width: 100%;
+                                height: vw-mobile(30);
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                            }
+                            .edit-img{
+                                height: vw-mobile(13),
+                            }
+                        }
+                    }           
+                    .tractor-img{
+                        width: vw-mobile(140); 
+                        height: vw-mobile(110);
+                    }
+                    .add-image-input{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
+                }
+                .add-image{
+                    position: relative;
+                    width: vw-mobile(135); 
+                    height: vw-mobile(100);
+                    .add-image-icon{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .add-image-input{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
+                }
+            }            
+            .problem-identity-container{
+                width: 100%;
+                .item-row-container{                    
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: vw-mobile(15);
+                    width: 100%;
+                    justify-content: space-between;
+                    .item-column-container{
+                        display: flex;
+                        flex-direction: column;
+                        width: 47%;
+                        .item{
+                            margin-bottom: vw-mobile(5);
+                            height: vw-mobile(45);
+                            .form-control{
+                                width: 100%;
+                                height: 100%;
+                                .select-item{
+                                    font-size: vw-tab(19);                            
+                                    color: #3C3B3B;
+                                    background-color: white;
+                                    font-family: 'SFUIDisplay-Bold';                            
+                                }
+                            }
+                            .item-label{
+                                font-family: 'SFUIDisplay-Bold';
+                                font-size: vw-mobile(7);
+                                margin: 0;
+                                color: #3C3B3B;
+                            }      
+                            .text-input{
+                                font-family: 'SFUIDisplay-Bold';
+                                font-size: vw-mobile(9);
+                                margin-top: vw-mobile(3);
+                                width: 100%;
+                                padding: 0 0 vw-mobile(10) 0;
+                            }
+                            .text-input-form{
+                                font-family: 'SFUIDisplay-Bold';
+                                font-size: vw-mobile(9);
+                                margin-top: vw-mobile(0);
+                                width: 100%;
+                                padding: 0 0 vw-mobile(3) 0;
+                            }
+                            .item-row-button{
+                                display: flex;
+                                flex-direction: row;
+                                margin-top: vw-mobile(3);
+                                .button{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 21%;
+                                    height: vw-mobile(25);
+                                    border-radius: vw-mobile(3);
+                                    box-shadow: 0px vw-mobile(1) vw-mobile(2) rgba(0, 0, 0, 0.161);
+                                    background: #FCFCFC;
+                                    font-size: vw(50);
+                                }
+                                .count{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-family: 'SFUIDisplay-Bold';
+                                    margin-left: vw-mobile(7);
+                                    margin-right: vw-mobile(7);
+                                    width: 50%;
+                                    height: vw-mobile(25);
+                                    border-radius: vw-mobile(3);
+                                    box-shadow: 0px vw-mobile(1) vw-mobile(2) rgba(0, 0, 0, 0.161);
+                                    font-size: vw-mobile(9);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .part-requirement-container{
+                width: 100%;
+                height: 100%;
+                justify-self: center;
+                align-self: flex-end; 
+                margin-top: vw-mobile(10);
+                .spare-part-list {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: vw-mobile(82);
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    white-space: nowrap;
+                    background-color: white;
+                    .spare-parts{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: vw-mobile(5);
+                        .spare-part-list-item {
+                            padding: vw-mobile(6) 0;
+                            font-family: 'Lato-Bold';
+                            font-weight: 500;
+                            color: #1D1D1D;
+                            font-size: vw-mobile(12);
+                            line-height: vw-mobile(10);
+                        }
+                        .add-part-button{
+                            padding: vw-mobile(3) vw-mobile(15);
+                            background-color: #F2F4F4;
+                            font-size: vw-mobile(15);
+                            margin-right: vw-mobile(5);
+                            cursor: pointer;
+                        }
+                        .add-part-button:hover{
+                            background-color: #e5e5e5;
+                            color: #3C3B3B;
+                        }
+                    }
+                }
+                .error-text{
+                    margin: vw-mobile(5) 0 0 0;
+                    font-size: vw-mobile(9);
+                    height: vw-mobile(10);
+                    font-family: 'Lato-Medium';
+                    color: red;
+                    width: 100%;
+                }
+                .part-validation{
+                    width: vw-mobile(15);
+                    .validation-icon{
+                        width: vw-mobile(10);
+                        height: vw-mobile(10);
+                    }
+                }
+                .search-input {
+                    width: 99%; 
+                    background-color: #f6f6f6 !important;
+                    height: vw-mobile(35);
+                    margin-bottom: vw-mobile(15);
+                }
+                .row-container-header{
+                    display: flex;
+                    flex-direction: row;
+                    border-top-style: dotted;
+                    border-top-color: rgba(112,112,112,0.37);
+                    border-top-width: 100%;
+                    border-bottom-style: dotted;
+                    border-bottom-color: rgba(112,112,112,0.37);
+                    border-top-width: 100%;
+                    margin-top: vw-mobile(10);
+                    padding-bottom: vw-mobile(5);
+                    padding-top: vw-mobile(5);
+                    .part-number{
+                        flex: 1;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(8);
+                        opacity: 0.52;
+                        padding: 0;
+                    }
+                    .part-description{
+                        flex: 1.2;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(8);
+                        opacity: 0.52;
+                    }
+                    .qty{
+                        flex: 1;
+                        color: #1D1D1D;
+                        font-family: 'SFUIText-Bold';
+                        font-size: vw-mobile(8);
+                        opacity: 0.52;
+                    }
+                }
+                .container-content{
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom-style: dotted;
+                    height: vw-mobile(100);
+                    border-bottom-color: rgba(112,112,112,0.37);
+                    border-bottom-width: 100%;
+                    padding-bottom: vw-mobile(2);
+                    padding-top: vw-mobile(5);
+                    overflow-y: scroll;
+                    .row-container-content{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: vw-mobile(5);
+                        .part-number{
+                            flex: 1;
+                            color: #1D1D1D;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-mobile(9);
+                        }
+                        .part-description{
+                            flex: 1;
+                            color: #1D1D1D;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-mobile(9);
+                        }
+                        .qty{
+                            flex: 1;
+                            color: #1D1D1D;
+                            font-family: 'SFUIText-Bold';
+                            font-size: vw-mobile(10);
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .qty-val{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0;
+                                width: vw-mobile(20);
+                                height: vw-mobile(17);
+                                border: 1px solid #CACACA;
+                            }
+                            .operation{
+                                width: vw-mobile(18);
+                                text-align: center;
+                                font-size: vw-mobile(15);
+                                padding: 0 vw-mobile(3);
+                                color: #CACACA;
+                                cursor: pointer;
+                            }
+                            .part-delete{
+                                width: vw-mobile(12);
+                                height: vw-mobile(15);
+                                margin-left: vw-mobile(5);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .btn-row{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    margin-top: vw-mobile(30);
+                    justify-content: space-between;
+                    margin-bottom: vw-mobile(15);
+                    .btn-save{
+                        background-color: #FFD500;
+                        margin: 0;
+                        width: 30%;
+                        padding: vw-mobile(13) 0;
+                        text-align: center;
+                        text-transform: none;
+                        font-size: vw-mobile(14);
+                        font-family: 'SFUIDisplay-Regular';
+                        border-radius: vw-mobile(5);
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    .btn-approve{
+                        border: vw-mobile(2) solid #707070;
+                        width: 30%;
+                        height: vw-mobile(44.3);
+                        text-transform: none;
+                        font-size: vw-mobile(14);
+                        font-family: 'SFUIDisplay-Regular';
+                        border-radius: vw-mobile(5);
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

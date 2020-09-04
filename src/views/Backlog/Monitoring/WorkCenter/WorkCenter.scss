@@ -1,0 +1,97 @@
+@import '../../../../themes/colors';
+@import '../../../../themes/fonts';
+@import '../../../../themes/size';
+    .problemlog-container{
+        padding-right:10px;
+        padding-bottom:10px;
+        max-width:32.5% !important;
+    }
+    
+    .header-rows{
+        display: flex;
+        flex-direction: row;
+        margin-top:vw(40) !important;
+        margin-bottom:vw(40) !important;
+        .btn-filter{
+            background-color: white;
+            text-transform: none;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: vw(15);
+            line-height: vw(18);
+            width: vw(200.53);
+            height: vw(48);
+            margin-right: vw(21.47);
+            box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+        }
+        .btn-filter:hover{
+            background-image: url('../../../../assets/images/btn-background.png');
+            background-repeat: no-repeat;
+            background-size: vw(210) vw(57);
+            background-position-x: -0.2vw;
+            color: white;
+            @extend .btn-filter;
+        }
+        .btn-filter-active{
+            background-image: url('../../../../assets/images/btn-background.png');
+            background-repeat: no-repeat;
+            background-size: vw(210) vw(57);
+            background-position-x: -0.2vw;
+            color: white;
+            @extend .btn-filter;
+        }
+    }
+    
+    
+//TABLET MODE
+@media (min-width:600px) and (max-width:1200px){
+    .problemlog-container{
+        padding-right:10px;
+        padding-bottom:10px;
+        max-width:50% !important;
+    }
+    
+    .header-rows{
+        display: flex;
+        flex-direction: row;
+        margin-top:vw-tab(40) !important;
+        margin-bottom:vw-tab(20) !important;
+        .btn-filter{
+            background-color: white;
+            text-transform: none;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: 2vw;
+            line-height: vw(18);
+            width: 50vw;
+            height: 5vw;
+            margin-right: vw(21.47);
+            box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+        }
+        .btn-filter-active{
+            background-image: url('../../../../assets/images/btn-background.png');
+            background-repeat: no-repeat;
+            background-size: 47vw 5.5vw;
+            background-position-x: -0.7vw;
+            color: white;
+            background-color: white;
+            text-transform: none;
+            font-family: 'Lato-Bold';
+            color: #3C3B3B;
+            font-size: 2vw;
+            line-height: vw(18);
+            width: 50vw;
+            height: 5vw;
+            margin-right: vw(21.47);
+            box-shadow: 0px vw(3) vw(6) rgba(0, 0, 0, 0.161);
+        }
+    }
+
+}
+@media (max-width:599px){
+    .problemlog-container{
+        padding-right:10px;
+        padding-bottom:10px;
+        max-width:100% !important;
+    }
+}
